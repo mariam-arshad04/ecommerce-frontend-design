@@ -1,0 +1,615 @@
+*{
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: "Inter", sans-serif;
+}
+/* for navbar */
+.navbar {
+    z-index: 1050; /* Ensures both navbars are above other content */
+}
+
+.primary-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1060; /* Higher than secondary-navbar */
+}
+
+
+
+.container-fluid .img-fluid img{
+    height: 40px;
+    width: 40px;
+}
+
+/* for search bar in header */
+/* Style the footer links */
+.footer-link {
+    /* color: #666666; */
+    text-decoration: none;
+}
+.form-control {
+    border-radius: 0 !important; /* Remove curved edges */
+    border: 1px solid #0872ff !important; /* Ensure blue border */
+    box-shadow: none !important; /* Remove focus shadow */
+}
+
+/* Keep blue border when clicking */
+.form-control:focus {
+    outline: none !important;
+    border: 1px solid #0872ff !important;
+    /*box-shadow: 0 0 5px #0872ff !important;  Slight glow effect */
+}
+
+/* Keep button styling consistent */
+.btn {
+    border-radius: 0 !important;
+    border: 1px solid #0872ff !important; /* Match input fields */
+}
+
+/* Ensure All Category text stays black */
+.category-input {
+    color: black !important;
+}
+
+/* for the icons in 1st navbar */
+.nav-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 30px;  Adjust spacing between items */ 
+}
+
+.nav-icons div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* for second navbar */
+
+/* for all category alignment */
+.all-category {
+    display: flex;
+    align-items: center;
+    gap: 14px; /* Adjust space between icon and text */
+}
+
+.all-category img {
+    width: 20px;
+    height: 17px;
+}
+
+.all-category a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: large; /* Adjust as needed */
+}
+
+
+
+
+.secondary-navbar {
+    position: relative; /* Change from default */
+    margin-top: 80px; /* Pushes it below the first navbar */
+    z-index: 1050; /* Lower than first navbar */
+}
+
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #d9e8ff;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.nav-item:hover .dropdown-menu {
+    display: block;
+  }
+
+.nav-account-link{
+    display: block;
+    background-color:white; 
+    /* border: 2px solid #6b4f4f; */
+    color: black; 
+    transition: 0.3s ease; 
+    text-decoration: none;
+}
+/* .nav-account-link:hover{
+    color: #d9e8ff;
+    background-color: #0872ff;
+    text-decoration: none;
+} */
+
+.dropdown-menu a+a{
+    background-color: white;
+    color: black;
+    border: 1px solid #0872ff;
+}
+
+.dropdown-menu{
+    background-color: white;
+    border: 1px solid #0872ff;
+    
+}
+
+.dropdown-menu .dropdown-item{
+    color: black;
+    font-size: medium;
+    font-weight: 400;
+    
+}
+
+.dropdown-menu li:hover {
+    background-color: #d9e8ff;
+}
+
+.dropdown-menu li:hover .dropdown-item{
+    background-color: inherit;
+}
+
+
+.second-component a{
+    font-weight:400;
+    font-size:medium;
+    /* color: #6b4f4f; */
+    transition: 0.3s ease;
+    color: black;
+}
+
+.secondary-navbar .second-component a:hover {
+    box-shadow:0 3px 0 0 #0872ff;
+    color: #0872ff;
+} 
+
+.secondary-navbar .third-component a{
+    color: black;
+}
+
+.secondary-navbar .third-component a:hover {
+    /* box-shadow:0 3px 0 0 #0872ff; */
+    color: #0872ff;
+    transition: 0.3s ease; 
+} 
+
+/* .nav-item a.active {
+    box-shadow: 0 3px 0 0 #0872ff;
+} */
+
+/* .nav-products-link{
+    display: block;
+    background-color:white; 
+    
+    color: #0872ff ; 
+    transition: 0.3s ease; 
+     text-decoration: none; 
+} */
+
+/* @media(min-width:992px){
+    .navbar-expand-lg .nabar-nav{
+        flex-direction: row;
+    }
+} */
+
+/* for main navabr div */
+
+
+
+/* for divider between navbars */
+.vertical-divider {
+    width: 100%;
+    height: 1px;  /* This makes it a horizontal line */
+    background-color: #bec4cc; /* Adjust the color */
+    margin: 0;
+}
+
+
+
+/* for footer */
+ /* Style the footer links */
+ .footer-link {
+    color: #666666;
+    text-decoration: none;
+}
+
+/* Apply hover effect */
+.footer-link:hover {
+    color: #000000 !important;
+}
+
+/* Ensure nav-link also inherits the hover effect */
+.nav-link.footer-link:hover {
+    color: #000000 !important;
+}
+
+.footer-brand img {
+    width: 50px;
+    height: 50px;
+}
+
+.footer-container {
+    width: 100% !important;
+}
+
+.footer-container .row{
+    gap: -29px;
+}
+
+/* for language selection in footer */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    /* border: 1px solid #ccc; */
+    padding: 5px;
+    cursor: pointer;
+    min-width: 150px;
+    background-color: transparent; /* Make background transparent */
+}
+
+.dropdown-btn img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    min-width: 150px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content div {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.dropdown-content div:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-content img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+
+/* for first div of the main div */
+.first-div{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    width: 85%;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 20px;
+    margin-top: 20px;
+    border: 3px solid #dee2e7 ;
+    border-radius: 6px;
+
+}
+/* left part */
+.para{
+    padding: 5px;
+}
+
+.para:hover{
+    background-color: #e5f1ff;
+    color: #1c1c1c !important;
+    transition: 0.3s ease;
+    padding: 5px;
+    border-radius: 7px;
+}
+
+/* middle part */
+.headphones{
+    background: url(public/main11.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 750px;
+    height: 385px;
+    padding: 30px;
+}
+
+.headphone-button{
+    color: black;
+    background-color: white;
+    padding: 10px;
+    transition: 0.3s ease;
+    border: none;
+    border-radius: 5px;
+
+}
+
+.headphone-button:hover{
+    transform: translateY(-20%);
+    color: #0872ff;
+    box-shadow: 0px 0px 6px #888;
+}
+
+/* rightmost part */
+/* hi user top part */
+.user-blog{
+    gap: 10px;
+}
+.join-now{
+    color: white;
+    background-color:#0973ff ;
+    transition: 0.2s ease;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+.join-now:hover{
+    transform: translateX(-4%);
+    box-shadow: 0px 0px 6px #888;
+}
+
+.Login{
+    color: #0973ff;
+    background-color: white;
+    transition: 0.3s ease;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+.Login:hover{
+    transform: translateX(-4%);
+    box-shadow: 0px 0px 6px #888;
+}
+
+/* for second div */
+/* for individual timer styling */
+.t{
+    color: white;
+    background-color: #606060;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px;
+    height: 65px;
+    width: 50px;
+}
+
+.second-div{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    width: 85%;
+    justify-content: center;
+    gap: 13px;
+    /* padding-top: 0px; */
+    margin-top: 20px;
+    border: 3px solid #dee2e7 ;
+    border-radius: 6px;
+
+}
+
+/* for third div */
+/* for left side of the div */
+.left-side-one{
+    background: url(images/bg-images/image\ 92.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 270px;
+    height: 262px;
+    padding: 25px;
+    gap: 2rem !important;
+}
+
+.source{
+    background-color: white;
+    color: black;
+    padding: 8px;
+    transition: 0.3s ease;
+    border: none;
+    border-radius: 5px;
+    font-size: small;
+}
+.source:hover{
+    transform: translateY(-15%);
+    box-shadow: 0px 0px 6px #888;
+    
+}
+/* for right side of the div which has all te products pictures */
+.top-part{
+    border-bottom: 2px solid #efefef;
+}
+.prd{
+    border-right: 2px solid #efefef;
+    width: 255px;
+    height: 130px;
+    /* padding-bottom: -50px; */
+}
+
+/* for fourth div */
+/* for left side of the div */
+.left-side-two{
+    background: url(images/bg-images/image\ 98.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 270px;
+    height: 262px;
+    padding: 25px;
+    gap: 2rem !important;
+}
+
+/* for fifth div */
+.fifth-div{
+    background: url(images/bg-images/Group\ 982.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 85%;
+    /* width: 270px; */
+    height: 420px;
+    display: flex;
+    flex-direction: row;
+    gap: 15rem;
+    margin-top: 20px;
+}
+
+
+/* for input taking area the right side of the div */
+.quote-input{
+    background-color: white;
+    height: 300px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    /* align-items: center; */
+    border-radius: 5px;
+    margin-top: 30px;
+}
+.need{
+    color: black !important;
+    border: 1px solid #dee2e7;
+    border-radius: 5px;
+    padding: 5px;
+    width: 410px;
+}
+.details{
+    color: #8b96a5;
+    outline: none;
+    border: none;
+    border: 1px solid #dee2e7;
+    border-radius: 5px;
+    padding: 5px;
+}
+.quantity{
+    width: 200px;
+    border: 1px solid #dee2e7;
+    border-radius: 5px;
+    padding: 5px;
+    color: black !important;
+}
+.Pcs{
+    /* padding: 5px; */
+    margin:12px 19px 5px 0px;
+    border-radius: 4px;
+    font-size: 14px;
+    border: 1px solid lightgray;
+    padding: 9px 30px 7px 7px;
+}
+.taker-button{
+    background-color:#0872ff; 
+    color: white;
+    border-radius: 5px; 
+    padding: 7px; 
+    border: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition for border color */
+    border: 1px solid transparent; /* Add a transparent border */
+}
+.taker-button:hover{
+    color:#0872ff ;
+    background-color: white;
+    border: 1px solid #0872ff;
+}
+
+/* for sixth div */
+sixth-div{
+    background-color: transparent;
+    width: 85%;
+    
+}
+
+.product{
+    background-color: white;
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding: 5px; */
+    border: 2px solid #dee2e7 ;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.product:hover{
+    transform: translateY(-2%);
+    box-shadow: 0px 0px 6px #888;
+}
+
+
+/* seventh div stuff */
+.picture{
+    position: relative;
+}
+.picture::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.41); /* Adjust opacity as needed */
+}
+
+.service{
+    border: 2px solid #dee2e7;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.service:hover{
+    transform: translateY(-4%);
+    box-shadow: 0px 0px 6px #888;
+}
+
+.common-image{
+    /* for making the circle in which the icon is in */
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #d1e7ff;
+    border: 2px solid white;
+    /* for placing the icon in the center of this circular div */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* for placing the icon in between both divs */
+    position: absolute;
+    top: -40%;
+    left: 75%;
+}
+
+/* for eigth div */
+.eigth-div{
+    width: 85%;
+    margin-top: 35px;
+    background-color: transparent;
+    padding-bottom: 30px;
+}
+
+.all-flags{
+    margin-top: 30px;
+}
+
+.flag{
+    width: 300px;
+}
+.flag-image{
+    width: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

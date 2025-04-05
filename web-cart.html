@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-cart</title>
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--cloudflare icons  -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- css link -->
+    <link rel="stylesheet" href="web-cart.css">
+    <!-- for star ratings icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- bootstrap footer link -->
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/footers/">
+    <!-- Bootstrap core CSS -->
+    <link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <!--for first navbar section-->
+    <nav class="navbar navbar-expand-lg primary-navbar fixed-top bg-white  mx-auto">
+        <div class="container-fluid mx-5">
+            <!-- <a class="navbar-brand" href="#">Offcanvas navbar</a> -->
+            <img src="images/user-options/logo-symbol.png" alt="logo" class="img-fluid">
+            <h2 style="color: #93bbf5; margin-left: 10px;">Brand</h2>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color: #6b4f4f;">Brand</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body" style="padding-left: 800px; padding-top: 10px;">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 " >
+
+                        <!-- <li class="nav-item" style="margin-right: 30px;">
+                            <a class="nav-link mx-lg-2" href="#">
+                                <div class="d-flex w-100" style="border: #0872ff 2px solid; border-radius: 0;">
+                                    <label for="Search" class="visually-hidden">Search</label>
+                                    <input id="Search" type="text" class="form-control" placeholder="Search"
+                                        style="width: 400px; border-color:#0872ff;">
+
+                                    <label for="All category" class="visually-hidden">All category</label>
+
+                                    <select name="All category" id="All category" style="width: 150px;">
+                                        <option value="All category">All category</option>
+                                        <option value="Electronics">Electronics</option>
+                                        <option value="Smartphones">Smartphones</option>
+                                        <option value="Modern tech">Modern tech</option>
+                                    </select>
+                                    <button class="btn btn-primary" type="button"
+                                        style="background-color: #0872ff;">Search</button>
+                                </div>
+                            </a>
+                        </li> -->
+
+                        <li class="nav-item" style="margin-left: 50px;">
+                            <a class="nav-link nav-icons mx-lg-2 gap-4" href="#"
+                                style="display: flex; justify-content: center; align-items: center;">
+                                <div>
+                                    <img src="images/user-options/profile.png" alt="" height="20px" width="20px"
+                                        style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                                    <p style="color: #bec4cc; font-weight: 500;">Profile</p>
+                                </div>
+
+                                <div>
+                                    <img src="images/user-options/message.png" alt="" height="20px" width="20px"
+                                        style="display: flex; justify-content: center; align-items: center;">
+                                    <p style="color: #bec4cc; font-weight: 500;">Message</p>
+                                </div>
+
+                                <div>
+                                    <img src="images/user-options/heart.png" alt="" height="20px" width="20px"
+                                        style="display: flex; justify-content: center; align-items: center;">
+                                    <p style="color: #bec4cc; font-weight: 500;">Orders</p>
+                                </div>
+
+                                <div>
+                                    <img src="images/user-options/cart.png" alt="" height="20px" width="20px"
+                                        style="display: flex; justify-content: center; align-items: center;">
+                                    <p style="color: #bec4cc; font-weight: 500;">My cart</p>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- for body part -->
+    <div class="main-content" style="background-color: #f7fafc; padding-top: 120px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        
+        <div class="heading" style=" width: 88%; ">
+            <h4 style="font-weight: 650;">My cart (3)</h4>
+        </div>
+
+        <!-- for first part -->
+        <div class="first-part">
+            <!-- for left part -->
+            <div class="left">
+                <div class="left-side">
+                    <!-- for first item -->
+                    <div class="first-item" style="margin-bottom: 25px;">
+                        <!-- for all info -->
+                        <div class="all-info" style="display: flex; flex-direction: row; gap: 5rem;">
+                            <!-- for left sode of info inorder to give more gap -->
+                            <div class="left-info" style="display: flex; flex-direction: row; gap: 15px;">
+                                <div class="picture">
+                                    <img src="web-cart images/shirt.png" alt="" height="78px" width="78px">
+                                </div>
+                                <div>
+                                    <p style="font-size: 430; font-weight: 550;">T-shirts with multiple colors, for men and lady</p>
+                                    <p style="color: #8b96a5;">Size: medium, Color: blue, Material: Plastic <br> Seller: Artel Market</p>
+                                    <div class="for-buttons" style="display: flex; gap: 15px;">
+                                        <button class="remove-btn">Remove</button> 
+                                        <button class="later-btn">Save for Later</button>
+                                    </div>
+                                </div> 
+                            </div>
+
+                            <!-- for right side of info inorder to give more gap -->
+                            <div class="right-info" style="padding-left: 200px;display: flex; flex-direction: column; align-items: end;">
+                                <div>
+                                    <p style="font-size: 430; font-weight: 550;">$78.99</p>
+                                </div>
+                                <!-- show number of items -->
+                                <div class="quantity" >
+                                    <label for="Qty: 9" class="visually-hidden">Qty: 9</label>
+                                    <select name="quantity" id="quantity" style="width: 100px; border-radius: 4px;border: 1px solid #dee2e7;padding: 6px 8px 5px 4px; box-shadow: 0px 0px 4px #888;">
+                                        <option value="Qty: 9">Qty: 9</option>
+                                        <option value="Qty: 8">Qty: 8</option>
+                                        <option value="Qty: 7">Qty: 7</option>
+                                        <option value="Qty: 6">Qty: 6</option>
+                                        <option value="Qty: 5">Qty: 5</option>
+                                        <option value="Qty: 4">Qty: 4</option>
+                                        <option value="Qty: 3">Qty: 3</option>
+                                        <option value="Qty: 2">Qty: 2</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+
+                    <!-- for divider -->
+                    <div class="horizontal-divider"></div>
+
+                    <!-- for second item -->
+                    <div class="second-item" style="margin-bottom: 25px; margin-top: 20px;">
+                        <!-- for all info -->
+                        <div class="all-info" style="display: flex; flex-direction: row; gap: 5rem;">
+                            <!-- for left sode of info inorder to give more gap -->
+                            <div class="left-info" style="display: flex; flex-direction: row; gap: 15px;">
+                                <div class="picture">
+                                    <img src="web-cart images/bag.png" alt="" height="78px" width="78px">
+                                </div>
+                                <div>
+                                    <p style="font-size: 430; font-weight: 550;">T-shirts with multiple colors, for men and lady</p>
+                                    <p style="color: #8b96a5;">Size: medium, Color: blue, Material: Plastic <br> Seller: Best factory LLc</p>
+                                    <div class="for-buttons" style="display: flex; gap: 15px;">
+                                        <button class="remove-btn">Remove</button> 
+                                        <button class="later-btn">Save for Later</button>
+                                    </div>
+                                </div> 
+                            </div>
+
+                            <!-- for right side of info inorder to give more gap -->
+                            <div class="right-info" style="padding-left: 200px;display: flex; flex-direction: column; align-items: end;">
+                                <div>
+                                    <p style="font-size: 430; font-weight: 550;">$39.00</p>
+                                </div>
+                                <!-- show number of items -->
+                                <div class="quantity" >
+                                    <label for="Qty: 9" class="visually-hidden">Qty: 9</label>
+                                    <select name="quantity" id="quantity" style="width: 100px; border-radius: 4px;border: 1px solid #dee2e7;padding: 6px 8px 5px 4px; box-shadow: 0px 0px 4px #888;">
+                                        <option value="Qty: 9">Qty: 9</option>
+                                        <option value="Qty: 8">Qty: 8</option>
+                                        <option value="Qty: 7">Qty: 7</option>
+                                        <option value="Qty: 6">Qty: 6</option>
+                                        <option value="Qty: 5">Qty: 5</option>
+                                        <option value="Qty: 4">Qty: 4</option>
+                                        <option value="Qty: 3">Qty: 3</option>
+                                        <option value="Qty: 2">Qty: 2</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+
+                    <!-- for divider -->
+                    <div class="horizontal-divider"></div>
+
+                    <!-- for second item -->
+                    <div class="second-item" style="margin-bottom: 25px; margin-top: 20px;">
+                        <!-- for all info -->
+                        <div class="all-info" style="display: flex; flex-direction: row; gap: 5rem;">
+                            <!-- for left sode of info inorder to give more gap -->
+                            <div class="left-info" style="display: flex; flex-direction: row; gap: 15px;">
+                                <div class="picture">
+                                    <img src="web-cart images/lamp.png" alt="" height="78px" width="78px">
+                                </div>
+                                <div>
+                                    <p style="font-size: 430; font-weight: 550;">T-shirts with multiple colors, for men and lady</p>
+                                    <p style="color: #8b96a5;">Size: medium, Color: blue, Material: Plastic <br> Seller: Artel Market</p>
+                                    <div class="for-buttons" style="display: flex; gap: 15px;">
+                                        <button class="remove-btn">Remove</button> 
+                                        <button class="later-btn">Save for Later</button>
+                                    </div>
+                                </div> 
+                            </div>
+
+                            <!-- for right side of info inorder to give more gap -->
+                            <div class="right-info" style="padding-left: 200px; display: flex; flex-direction: column; align-items: end;">
+                                <div>
+                                    <p style="font-size: 430; font-weight: 550;">$170.50</p>
+                                </div>
+                                <!-- show number of items -->
+                                <div class="quantity" >
+                                    <label for="Qty: 9" class="visually-hidden">Qty: 9</label>
+                                    <select name="quantity" id="quantity" style="width: 100px; border-radius: 4px;border: 1px solid #dee2e7;padding: 6px 8px 5px 4px; box-shadow: 0px 0px 4px #888;">
+                                        <option value="Qty: 9">Qty: 9</option>
+                                        <option value="Qty: 8">Qty: 8</option>
+                                        <option value="Qty: 7">Qty: 7</option>
+                                        <option value="Qty: 6">Qty: 6</option>
+                                        <option value="Qty: 5">Qty: 5</option>
+                                        <option value="Qty: 4">Qty: 4</option>
+                                        <option value="Qty: 3">Qty: 3</option>
+                                        <option value="Qty: 2">Qty: 2</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+
+                    <!-- for divider -->
+                    <div class="horizontal-divider"></div>
+
+                    <div class="bottom-buttons" style="display: flex; flex-direction: row; justify-content: space-between; width: 85%; align-items: center;">
+                        <button class="back-btn">
+                            <img width="24" height="24" src="https://img.icons8.com/forma-light-sharp/24/FFFFFF/long-arrow-left.png" alt="long-arrow-left"/>
+                            Back to shop
+                        </button> 
+                        <button class="removeAll-btn">Remove all</button>
+                    </div>
+
+                    
+                </div>
+
+                <!-- for bottom of left side -->
+                <div class="bottom-left">
+                    <!-- first -->
+                    <div class="feat" style="display: flex; gap: 15px;">
+                        <div class="circular"><img src="web-cart images/secure.png" alt="" height="30px" width="30px"></div>
+                        <p style="color: #1c1c1c;">Secure payment <br><span style="color: #a9acb0;">Haveyou ever finally just</span></p>
+                    </div>
+                    <!-- first -->
+                    <div class="feat" style="display: flex; gap: 15px;">
+                        <div class="circular"><img src="web-cart images/customer_support.png" alt="" height="25px" width="25px"></div>
+                        <p style="color: #1c1c1c;">Customer support <br><span style="color: #a9acb0;">Haveyou ever finally just</span></p>
+                    </div>
+                    <!-- first -->
+                    <div class="feat" style="display: flex; gap: 15px;">
+                        <div class="circular"><img src="web-cart images/delivery.png" alt="" height="25px" width="25px"></div>
+                        <p style="color: #1c1c1c;">Free delivery <br><span style="color: #a9acb0;">Haveyou ever finally just</span></p>
+                    </div>
+                </div>
+            </div>
+            <!-- for right part -->
+            <div class="right">
+                <!-- for top right coupon application div -->
+                <div class="top-right">
+                    <p style="color: #505050;">Have a coupon?</p>
+                    <div class="coupon-div" style="display: flex;">
+                        <form action="">
+                            <!-- <label for="coupon">First name:</label><br> -->
+                            <input type="text" id="coupon" class="coupon" name="coupon" placeholder="Add a coupon"><button class="coupon-btn">Apply</button>
+                          </form>
+                    </div>
+                </div>
+                <!-- for bottom right subtotal div -->
+                <div class="bottom-right">
+                    <div class="var-and-values" style="display: flex; justify-content: space-between;">
+                        <div class="var" style="color: #505050;">
+                            <p>Subtotal:</p>
+                            <p>Discount:</p>
+                            <p>Tax:</p>
+                        </div>
+                        <div class="values">
+                            <p style="color: #505050;">$1403.97</p>
+                            <p style="color: #fa3434;">- $60.00</p>
+                            <p style="color: #00b517;">+ $14.00</p>
+                        </div>
+                    </div>  
+                    <!-- for divider -->
+                    <div class="horizontal-divider"></div>
+
+                    <div style="display: flex; justify-content: space-between;">
+                        <p style="font-weight: 700;">Total:</p>
+                        <p style="font-weight: 700; font-size: larger;">$1357.97</p>
+                    </div>
+
+                    <button class="checkout-btn">Checkout</button>
+
+                    <div class="partners" style="display: flex; gap: 10px; justify-content: center; margin-top: 10px;">
+                        <div class="pic-container">
+                            <img src="web-cart images/American express.jpeg" alt="" height="20px" width="37px">
+                        </div>
+                        <div class="pic-container">
+                            <img src="web-cart images/Mastercard_logo.jpg" alt="" height="20px" width="37px">
+                        </div>
+                        <div class="pic-container">
+                            <img src="web-cart images/Paypal_logo.jpeg" alt="" height="28px" width="37px">
+                        </div>
+                        <div class="pic-container">
+                            <img src="web-cart images/visa_logo.jpeg" alt="" height="28px" width="37px">
+                        </div>
+                        <div class="pic-container">
+                            <img src="web-cart images/apple_pay.jpeg" alt="" height="20px" width="37px">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- for middle part -->
+        <div class="middle-part">
+            <h5 style="font-weight: 700;">Saved for later</h5>
+
+            <div class="product-cards" style="display: flex; flex-direction: row; gap: 3rem; justify-content: center; margin-top: 20px;">
+
+                <!-- for card 1 -->
+                <div class="card" >
+                    <div class="card-image">
+                        <img src="web-cart images/pink-mob.png" class="card-img-top" alt="..." height="240px" width="270px">
+                    </div>
+                    
+                    <!-- for info part of the card -->
+                    <div class="info">
+                        <h5 style="font-weight: 600;">$99.50</h5>
+                        <h6 style="font-weight: 400; color: #606060;">GoPro HERO6 4K Action <br>Camera - Black</h6>
+                    </div>
+                    
+                    <div>
+                        <button class="cart-btn">
+                            <img width="24" height="24" src="https://img.icons8.com/material-outlined/24/0d6efd/shopping-cart--v1.png" alt="shopping-cart--v1"/>
+                            Move to cart
+                        </button>
+                    </div>
+                     
+                </div>
+
+                <!-- for card 2 -->
+                <div class="card" >
+                    <div class="card-image">
+                        <img src="web-cart images/blue-mob.png" class="card-img-top" alt="..." height="240px" width="270px">
+                    </div>
+                    
+                    <!-- for info part of the card -->
+                    <div class="info">
+                        <h5 style="font-weight: 600;">$99.50</h5>
+                        <h6 style="font-weight: 400; color: #606060;">GoPro HERO6 4K Action <br>Camera - Black</h6>
+                    </div>
+                    
+                    <div>
+                        <button class="cart-btn">
+                            <img width="24" height="24" src="https://img.icons8.com/material-outlined/24/0d6efd/shopping-cart--v1.png" alt="shopping-cart--v1"/>
+                            Move to cart
+                        </button>
+                    </div>
+                     
+                </div>
+
+                <!-- for card 1 -->
+                <div class="card" >
+                    <div class="card-image">
+                        <img src="web-cart images/watch.png" class="card-img-top" alt="..." height="240px" width="270px">
+                    </div>
+                    
+                    <!-- for info part of the card -->
+                    <div class="info">
+                        <h5 style="font-weight: 600;">$99.50</h5>
+                        <h6 style="font-weight: 400; color: #606060;">GoPro HERO6 4K Action <br>Camera - Black</h6>
+                    </div>
+                    
+                    <div>
+                        <button class="cart-btn">
+                            <img width="24" height="24" src="https://img.icons8.com/material-outlined/24/0d6efd/shopping-cart--v1.png" alt="shopping-cart--v1"/>
+                            Move to cart
+                        </button>
+                    </div>
+                     
+                </div>
+
+                <!-- for card 1 -->
+                <div class="card" >
+                    <div class="card-image">
+                        <img src="web-cart images/laptop.png" class="card-img-top" alt="..." height="240px" width="270px">
+                    </div>
+                    
+                    <!-- for info part of the card -->
+                    <div class="info">
+                        <h5 style="font-weight: 600;">$99.50</h5>
+                        <h6 style="font-weight: 400; color: #606060;">GoPro HERO6 4K Action <br>Camera - Black</h6>
+                    </div>
+                    
+                    <div>
+                        <button class="cart-btn">
+                            <img width="24" height="24" src="https://img.icons8.com/material-outlined/24/0d6efd/shopping-cart--v1.png" alt="shopping-cart--v1"/>
+                            Move to cart
+                        </button>
+                    </div>
+                     
+                </div>
+                
+
+            </div>
+        </div>
+
+        <!-- for last part -->
+        <div class="last-part">
+            <div class="content" style="display: flex; justify-content: center; align-items: center;">
+                <p style="color: white; font-size: x-large; font-weight: 700;">Super discount on more than 100 USD <br>
+                <span style="font-size: large; font-weight: 300;">Have you ever just write dummy info</span>
+                </p>
+            </div>
+            <div class="lp-btn" style="display: flex; justify-content: center; align-items: center;">
+                <button class="shop-btn">Shop now</button>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- for footer -->
+    <div class="footer-container" style="padding-top: 20px;  ">
+        <footer class="py-4" style="background-color: white;">
+            <div class="row" style="padding-left: 60px; padding-right: 60px;display: flex; justify-content: center; ">
+                <div class="col-2" style="padding-right: 30px;">
+                    <div class="image-and-name" style="display: flex; ; gap: 10px; padding-bottom: 15px;">
+                        <img src="images/user-options/logo-symbol.png" alt="logo" class="img-fluid">
+                        <h2 style="color: #93bbf5;">Brand</h2>
+                    </div>
+                    <div class="footer-brand-content">
+                        <p style="color: #666666; text-align: justify;">Best information about the company gies here but
+                            now lorem ipsum is</p>
+                    </div>
+                    <div class="right">
+                        <img width="24" height="24" src="https://img.icons8.com/material/24/bdc4cd/facebook-new.png"
+                            alt="facebook-new" />
+                        <img width="24" height="24" src="https://img.icons8.com/material/24/bdc4cd/twitter--v2.png"
+                            alt="twitter--v2" />
+                        <img width="24" height="24" src="https://img.icons8.com/material/24/bdc4cd/linkedin--v1.png"
+                            alt="linkedin--v1" />
+                        <img width="24" height="24" src="https://img.icons8.com/material/24/bdc4cd/instagram.png"
+                            alt="instagram" />
+                        <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/bdc4cd/youtube-play.png"
+                            alt="youtube-play" />
+                    </div>
+                </div>
+
+
+                <div class="col-2" style="padding-left: 40px;">
+                    <h5>About</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">About Us</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Find store</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Categories</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Blogs</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-2">
+                    <h5>Partnership</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">About Us</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Find Store</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Categories</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Blogs</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-2">
+                    <h5>Information</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Help
+                                Center</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Money
+                                Refund</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Shipping</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-2">
+                    <h5>For Users</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Login</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Register</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Settings</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">My Orders</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-2">
+                    <h5>Get app</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link"><img
+                                    src="images/user-options/apple.png" alt="" height="50px" width="145px"></a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link"><img
+                                    src="images/user-options/google.png" alt="" height="53px" width="145px"></a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="d-flex justify-content-between py-4 my-4" style="background-color: #eff2f4; padding: 100px;">
+                <p style="color: #666666;">&copy; 2023 Ecommerce.</p>
+                <!-- <div style="display: flex;">
+
+                <select name="English" id="English" style="color: #666666; padding-top: 7px; border: none; background-color: transparent;">
+                    <option value="English"><img src="public/flags/usa.png" alt="" height="40px">English</option>
+                </select>
+                <p >English</p>
+            </div> -->
+                <div class="dropdown" style="color: #666666; border: none;">
+                    <div class="dropdown-btn" onclick="toggleDropdown()">
+                        <img id="selected-flag" src="http://static.albunack.net/images/flags/flags-iso/shiny/32/GB.png"
+                            alt="English">
+                        <span id="selected-language">English</span>
+                        <img width="24" height="24" src="https://img.icons8.com/material/24/collapse-arrow--v1.png"
+                            alt="collapse-arrow--v1" />
+                    </div>
+                    <div class="dropdown-content" id="dropdown-content">
+                        <div
+                            onclick="selectLanguage('en', 'English', 'http://static.albunack.net/images/flags/flags-iso/shiny/32/GB.png')">
+                            <img src="http://static.albunack.net/images/flags/flags-iso/shiny/32/GB.png" alt="English">
+                            English
+                        </div>
+                        <div
+                            onclick="selectLanguage('de', 'Deutsch', 'http://static.albunack.net/images/flags/flags-iso/shiny/32/DE.png')">
+                            <img src="http://static.albunack.net/images/flags/flags-iso/shiny/32/DE.png" alt="Deutsch">
+                            Deutsch
+                        </div>
+                        <div
+                            onclick="selectLanguage('es', 'Español', 'http://static.albunack.net/images/flags/flags-iso/shiny/32/ES.png')">
+                            <img src="http://static.albunack.net/images/flags/flags-iso/shiny/32/ES.png" alt="Español">
+                            Español
+                        </div>
+                        <div
+                            onclick="selectLanguage('fr', 'Français', 'http://static.albunack.net/images/flags/flags-iso/shiny/32/FR.png')">
+                            <img src="http://static.albunack.net/images/flags/flags-iso/shiny/32/FR.png" alt="Français">
+                            Français
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </footer>
+    </div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-detail</title>
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--cloudflare icons  -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- css link -->
+    <link rel="stylesheet" href="web-detail.css">
+    <!-- for star ratings icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- bootstrap footer link -->
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/footers/">
+    <!-- Bootstrap core CSS -->
+    <link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+
+    <!--for first navbar section-->
+    <nav class="navbar navbar-expand-lg primary-navbar fixed-top bg-white  mx-auto">
+        <div class="container-fluid mx-5">
+            <!-- <a class="navbar-brand" href="#">Offcanvas navbar</a> -->
+            <img src="images/user-options/logo-symbol.png" alt="logo" class="img-fluid">
+            <h2 style="color: #93bbf5; margin-left: 10px;">Brand</h2>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color: #6b4f4f;">Brand</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item" style="margin-right: 30px;">
+                            <a class="nav-link mx-lg-2" href="#">
+                                <div class="d-flex w-100" style="border: #0872ff 2px solid; border-radius: 0;">
+                                    <label for="Search" class="visually-hidden">Search</label>
+                                    <input id="Search" type="text" class="form-control" placeholder="Search"
+                                        style="width: 400px; border-color:#0872ff;">
+
+                                    <label for="All category" class="visually-hidden">All category</label>
+
+                                    <select name="All category" id="All category" style="width: 150px;">
+                                        <option value="All category">All category</option>
+                                        <option value="Electronics">Electronics</option>
+                                        <option value="Smartphones">Smartphones</option>
+                                        <option value="Modern tech">Modern tech</option>
+                                    </select>
+
+                                    <!-- <label for="All Category" class="visually-hidden">All Category </label>
+                        <input id="All Category" type="text" class="form-control" placeholder="All Category" style="width: 150px;"> -->
+                                    <button class="btn btn-primary" type="button"
+                                        style="background-color: #0872ff;">Search</button>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="nav-item" style="margin-left: 50px;">
+                            <a class="nav-link nav-icons mx-lg-2 gap-4" href="#"
+                                style="display: flex; justify-content: center; align-items: center;">
+                                <div>
+                                    <img src="images/user-options/profile.png" alt="" height="20px" width="20px"
+                                        style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                                    <p style="color: #bec4cc; font-weight: 500;">Profile</p>
+                                </div>
+
+                                <div>
+                                    <img src="images/user-options/message.png" alt="" height="20px" width="20px"
+                                        style="display: flex; justify-content: center; align-items: center;">
+                                    <p style="color: #bec4cc; font-weight: 500;">Message</p>
+                                </div>
+
+                                <div>
+                                    <img src="images/user-options/heart.png" alt="" height="20px" width="20px"
+                                        style="display: flex; justify-content: center; align-items: center;">
+                                    <p style="color: #bec4cc; font-weight: 500;">Orders</p>
+                                </div>
+
+                                <div>
+                                    <img src="images/user-options/cart.png" alt="" height="20px" width="20px"
+                                        style="display: flex; justify-content: center; align-items: center;">
+                                    <p style="color: #bec4cc; font-weight: 500;">My cart</p>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    
+    <!-- for 2nd navbar -->
+    <nav class="navbar navbar-expand-lg secondary-navbar bg-white">
+        <div class="container-fluid">
+            <!-- <a class="navbar-brand" href="#">Offcanvas navbar</a> -->
+            <!-- <img src="images/Logo.png" alt="logo" class="img-fluid"> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color: black;">Brand</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav mb-2 mb-lg-0" style="margin-left: 35px;">
+                        <li class="nav-item">
+                            <a class="nav-link all-category mx-lg-2" href="#">
+                                <img src="images/user-options/menu.png" alt="logo" class="img-fluid" height="25px"
+                                    width="15px">
+                                <h2 style="color: black; font-size: medium; font-weight: 400; padding-top: 1px;">All
+                                    category</h2>
+                            </a>
+                        </li>
+
+                        <li class="nav-item second-component">
+                            <a class="nav-link mx-lg-2" href="#">Hot offers</a>
+                        </li>
+                        <li class="nav-item second-component">
+                            <a class="nav-link mx-lg-2" href="#">Gift boxes</a>
+                        </li>
+                        <li class="nav-item second-component">
+                            <a class="nav-link mx-lg-2" href="#">Projects</a>
+                        </li>
+                        <li class="nav-item second-component">
+                            <a class="nav-link mx-lg-2" href="#">Menu items</a>
+                        </li>
+
+                        <li class="nav-item third-component dropdown ">
+                            <a class="nav-link nav-products-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Help
+                            </a>
+                            <ul class="dropdown-menu dropdown-products p-0">
+                                <li><a class="dropdown-item p-2" href="#">Information</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!-- <ul class="navbar-nav mb-5 mb-lg-0">
+                
+            </ul> -->
+
+                    <ul class="navbar-nav" style="margin-left: 380px; gap: 3rem;">
+                        <li class="nav-item third-component dropdown">
+                            <a class="nav-link nav-account-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                English, USD
+                            </a>
+                            <ul class="dropdown-menu p-0">
+                                <li><a class="dropdown-item p-2" href="#">English, Euro</a></li>
+                                <li class="dropdown-divider m-0"></li>
+                                <li><a class="dropdown-item p-2" href="#">English, Pkr</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item third-component dropdown me-5">
+                            <a class="nav-link nav-account-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Ship to <img src="images/user-options/flag.png" alt="">
+                            </a>
+
+                            <ul class="dropdown-menu p-0">
+                                <li><a class="dropdown-item p-2" href="#">Pakistan</a></li>
+                                <li class="dropdown-divider m-0"></li>
+                                <li><a class="dropdown-item p-2" href="#">America</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="vertical-divider"></div> <!-- This will act as the separator -->
+
+    <div class="webDetails" style="background-color: #f8f9fb;">
+        <div style=" padding: 10px; padding-left: 35px; font-size: 14px; color: #8B96A5;">
+            <a href="#" style="color: #8B96A5; padding-left: 83px; text-decoration: none;">Home</a> 
+            > 
+            <a href="#" style="color: #8B96A5; padding-left: 7px; text-decoration: none;">Clothings</a> 
+            > 
+            <a href="#" style="color: #8B96A5; padding-left: 7px; text-decoration: none;">Men's wear</a> 
+            > 
+            <span style="color: #8B96A5; padding-left: 7px;">Summer clothing</span>
+
+
+        </div>
+
+        <!-- <div class="mainShirtComp"> -->
+        <div class="menCloth">
+            <div class="left">
+                <!-- <div class="menCloth"> -->
+                    <div class="shirtImage"><img src="web-details/Group 1004.png" alt=""></div>
+                    <div class="shirtGallery"><img src="web-details/Gallery.png" alt=""></div>
+                <!-- </div> -->
+            </div>
+
+            <!-- middle. -->
+            <div class="middle">
+                <div class="green">
+                    <span style="color: rgb(28, 179, 28);">
+                        <img src="web-details/Vector1.png" alt="tick">
+                        In stock
+                    </span>
+                </div>
+                <div class="heading" style="font-size: larger; font-weight: bold; font-family: Arial, sans-serif; height: 60px;">
+                    <p>Mens Long Sleeve T-shirt Cotton Base <br> Layer Slim Muscle</p>
+                </div>
+                <div class="extra">
+                    <div class="here">
+                        <img src="web-details/rating.png" alt="rate" style="padding-right: 4px;"> 
+                        <span style="color: orange; bottom: 0; padding-right: 4px;"> 9.3 </span>
+                        <img src="web-details/Dot.png" alt="a dot" style="padding-right: 4px;"> 
+                        <img src="web-details/message.png" alt="message" style="padding-right: 4px;"> 
+                        <span style="padding-right: 4px; color: #8B96A5;">32 reviews</span>
+                        <img src="web-details/Dot.png" alt="dot" style="padding-right: 4px;">
+                        <img src="web-details/Vector2.png" alt="" style="padding-right: 4px;">
+                        <span style="color: #8B96A5;"> 154 sold</span>
+                    </div>
+                </div>
+
+                <div class="price-container">
+                    <div class="price-box">
+                        <p class="price red">$98.00</p>
+                        <p class="quantity">50-100 pcs</p>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="price-box">
+                        <p class="price">$90.00</p>
+                        <p class="quantity">100-700 pcs</p>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="price-box">
+                        <p class="price">$78.00</p>
+                        <p class="quantity">700+ pcs</p>
+                    </div>
+                </div>
+                <!-- Product Details Table -->
+                <div class="product-details">
+                    <div class="row" style="border-bottom: 1px solid #ddd; padding-bottom: 8px;">
+                        <span class="label">Price:</span>
+                        <span class="value">Negotiable</span>
+                    </div>
+                    <div class="row" style="padding-top: 8px;">
+                        <span class="label">Type:</span>
+                        <span class="value">Classic shoes</span>
+                    </div>
+                    <div class="row">
+                        <span class="label">Material:</span>
+                        <span class="value">Plastic material</span>
+                    </div>
+                    <div class="row" style="border-bottom: 1px solid #ddd; padding-bottom: 8px;">
+                        <span class="label">Design:</span>
+                        <span class="value">Modern nice</span>
+                    </div>
+                    <div class="row" style="padding-top: 8px;">
+                        <span class="label">Customization:</span>
+                        <span class="value">Customized logo and <br> design custom packages</span>
+                    </div>
+                    <div class="row">
+                        <span class="label">Protection:</span>
+                        <span class="value">Refund Policy</span>
+                    </div>
+                    <div class="row" style="border-bottom: 1px solid #ddd; padding-bottom: 9px;">
+                        <span class="label">Warranty:</span>
+                        <span class="value">2 years full warranty</span>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- right -->
+            <div class="right">
+                <div class="supplier">
+                    <img src="web-details/img.jpg" alt="the R logo">
+                    <span>Supplier <br> Guanjoi Trading LLC
+                    </span>
+                </div>
+                <div class="place">
+                    <div class="row" style="padding-top: 0;">
+                        <div class="image">
+                            <img src="web-details/germany.png" alt="germany" style="height: 10px; width: 20px;">
+                        </div>
+                        <span>Germany, Berlin</span>
+                    </div>
+                    <div class="row">
+                        <div class="image">
+                            <img src="web-details/verify.png" alt="tick" style="width: 15px; height: 20px;">
+                        </div>
+                        <span>Verified Seller</span>
+                    </div>
+                    <div class="row">
+                        <div class="image">
+                            <img src="web-details/globe.png" alt="globe" style="width: 15px; height: 17px;">
+                        </div>
+                        <span>Worldwide shipping</span>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="primary-btn">Send inquiry</button>
+                    <button class="secondary-btn">Seller’s profile</button>
+                </div>                
+            </div>
+            <div class="later" id="saveLater">
+                <img src="web-details/heart.png" alt="logo" id="heartIcon">
+                <span id="saveText">Save for later</span>
+            </div>          
+        </div>
+
+        <div class="description">
+            <div class="frontBar">
+                <span class="Tab" style="color: #0D6EFD; font-weight: bold; border-bottom: 2px solid #0D6EFD;">Description</span>
+                <span class="Tab" style="color: #8B96A5">Reviews</span>
+                <span class="Tab" style="color: #8B96A5">Shipping</span>
+                <span class="Tab" style="color: #8B96A5">About seller</span>
+            </div>
+            <div class="contents">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <br>
+                Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            </div>
+            <div class="table">
+                <table class="info-table" style="font-size: 15px;">
+                    <tr>
+                        <td>Model</td>
+                        <td>#8786867</td>
+                    </tr>
+                    <tr>
+                        <td>Style</td>
+                        <td>Classic style</td>
+                    </tr>
+                    <tr>
+                        <td>Certificate</td>
+                        <td>ISO-898921212</td>
+                    </tr>
+                    <tr>
+                        <td>Size</td>
+                        <td>34mm x 450mm x 19mm</td>
+                    </tr>
+                    <tr>
+                        <td>Memory</td>
+                        <td>36GB RAM</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tickContent">
+                <div class="content"><img src="web-details/greytick.png" alt="tick"><span>Some great feature name here</span></div>
+                <div class="content"><img src="web-details/greytick.png" alt="tick"><span>Lorem ipsum dolor sit amet, consectetur </span></div>
+                <div class="content"><img src="web-details/greytick.png" alt="tick"><span>Duis aute irure dolor in reprehenderit</span></div>
+                <div class="content"><img src="web-details/greytick.png" alt="tick"><span>Some great feature name here</span></div>
+            </div>
+            
+        </div>
+
+        <!-- you may like -->
+        <div class="youMayLike">
+            <div class="mainLine"><span>You may like</span></div>
+            <div class="theFiveShirts">
+                <div class="shirtHere">
+                    <div class="image"><img src="web-details/Group 558.png" alt=""></div>
+                    <div class="contains">
+                        <span class="black">Men Blazers Sets </span>
+                        <span class="black">Elegant Formal</span>
+                        <span class="grey">$7.00 - $99.50</span>
+                    </div>
+                </div>
+                <div class="shirtHere">
+                    <div class="image"><img src="web-details/Group 558 (1).png" alt=""></div>
+                    <div class="contains">
+                        <span class="black">Men Shirt Sleeve </span>
+                        <span class="black">Polo Contrast</span>
+                        <span class="grey">$7.00 - $99.50</span>
+                    </div>
+                </div>
+                <div class="shirtHere">
+                    <div class="image"><img src="web-details/Group 558 (2).png" alt=""></div>
+                    <div class="contains">
+                        <span class="black">Apple Watch Series</span>
+                        <span class="black">Space Gray</span>
+                        <span class="grey">$7.00 - $99.50</span>
+                    </div>
+                </div>
+                <div class="shirtHere">
+                    <div class="image"><img src="web-details/Group 558 (3).png" alt=""></div>
+                    <div class="contains">
+                        <span class="black">Basketball Crew </span>
+                        <span class="black">Socks Long Stuff</span>
+                        <span class="grey">$7.00 - $99.50</span>
+                    </div>
+                </div>
+                <div class="shirtHere">
+                    <div class="image"><img src="web-details/Group 558 (4).png" alt=""></div>
+                    <div class="contains">
+                        <span class="black">New Summer Men's</span>
+                        <span class="black">castrol T-Shirts</span>
+                        <span class="grey">$7.00 - $99.50</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- product related  -->
+        <div class="related-detail">
+            <div class="details">Related products</div>
+            <div class="containers">
+                <div class="container" style="padding-left: 20px;">
+                    <div class="image"><img src="web-details/img.png" alt=""></div>
+                    <span class="theBlack">Xiaomi Redmi 8 <br>Original <br></span>
+                    <div class="not-black"><span>$32.00-$40.00</span></div>
+                </div>
+                <div class="container">
+                    <div class="image"><img src="web-details/img (1).png" alt=""></div>
+                    <span class="theBlack">Xiaomi Redmi 8 <br>Original <br> </span>
+                    <div class="not-black"><span>$32.00-$40.00</span></div>
+                </div>
+                <div class="container">
+                    <div class="image"><img src="web-details/img (2).png" alt=""></div>
+                    <span class="theBlack">Xiaomi Redmi 8 <br>Original <br> </span>
+                    <div class="not-black"><span>$32.00-$40.00</span></div>
+                </div>
+                <div class="container">
+                    <div class="image"><img src="web-details/img (3).png" alt=""></div>
+                    <span class="theBlack">Xiaomi Redmi 8 <br>Original <br> </span>
+                    <div class="not-black"><span>$32.00-$40.00</span></div>
+                </div>
+                <div class="container">
+                    <div class="image"><img src="web-details/img (4).png" alt=""></div>
+                    <span class="theBlack">Xiaomi Redmi 8 <br>Original <br> </span>
+                    <div class="not-black"><span>$32.00-$40.00</span></div>
+                </div>
+                <div class="container">
+                    <div class="image"><img src="web-details/img (5).png" alt=""></div>
+                    <span class="theBlack">Xiaomi Redmi 8 <br>Original <br> </span>
+                    <div class="not-black"><span>$32.00-$40.00</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Discount Banner -->
+        <div class="banner">
+            <div class="banner-text">
+                <h2>Super discount on more than 100 USD</h2>
+                <p>Have you ever finally just write dummy info</p>
+            </div>
+            <button class="banner-button" onclick="shopNow()">Shop now</button>
+        </div>
+    </div>
+
+
+
+    <!-- for footer -->
+    <div class="footer-container" style="padding-top: 20px; width: 100%; ">
+        <footer class="py-4" style="background-color: white;">
+            <div class="row" style="padding-left: 60px; padding-right: 60px;display: flex; justify-content: center; ">
+                <div class="col-2" style="padding-right: 30px;">
+                    <div class="image-and-name" style="display: flex; ; gap: 10px; padding-bottom: 15px;">
+                        <img src="images/user-options/logo-symbol.png" alt="logo" class="img-fluid">
+                        <h2 style="color: #93bbf5;">Brand</h2>
+                    </div>
+                    <div class="footer-brand-content">
+                        <p style="color: #666666; text-align: justify;">Best information about the company gies here but
+                            now lorem ipsum is</p>
+                    </div>
+                    <!-- <div class="right">
+                        <img width="24" height="24" src="https://img.icons8.com/material/24/bdc4cd/facebook-new.png"
+                            alt="facebook-new" />
+                        <img width="24" height="24" src="https://img.icons8.com/material/24/bdc4cd/twitter--v2.png"
+                            alt="twitter--v2" />
+                        <img width="24" height="24" src="https://img.icons8.com/material/24/bdc4cd/linkedin--v1.png"
+                            alt="linkedin--v1" />
+                        <img width="24" height="24" src="https://img.icons8.com/material/24/bdc4cd/instagram.png"
+                            alt="instagram" />
+                        <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/bdc4cd/youtube-play.png"
+                            alt="youtube-play" />
+                    </div> -->
+                </div>
+
+
+                <div class="col-2" style="padding-left: 40px;">
+                    <h5>About</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">About Us</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Find store</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Categories</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Blogs</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-2">
+                    <h5>Partnership</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">About Us</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Find Store</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Categories</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Blogs</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-2">
+                    <h5>Information</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Help
+                                Center</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Money
+                                Refund</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Shipping</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-2">
+                    <h5>For Users</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Login</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Register</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Settings</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">My Orders</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-2">
+                    <h5>Get app</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link"><img
+                                    src="images/user-options/apple.png" alt="" height="50px" width="145px"></a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link"><img
+                                    src="images/user-options/google.png" alt="" height="53px" width="145px"></a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="d-flex justify-content-between py-4 my-4" style="background-color: #eff2f4; padding: 100px;">
+                <p style="color: #666666;">&copy; 2023 Ecommerce.</p>
+                <!-- <div style="display: flex;">
+
+                <select name="English" id="English" style="color: #666666; padding-top: 7px; border: none; background-color: transparent;">
+                    <option value="English"><img src="public/flags/usa.png" alt="" height="40px">English</option>
+                </select>
+                <p >English</p>
+            </div> -->
+                <div class="dropdown" style="color: #666666; border: none;">
+                    <div class="dropdown-btn" onclick="toggleDropdown()">
+                        <img id="selected-flag" src="http://static.albunack.net/images/flags/flags-iso/shiny/32/GB.png"
+                            alt="English">
+                        <span id="selected-language">English</span>
+                        <img width="24" height="24" src="https://img.icons8.com/material/24/collapse-arrow--v1.png"
+                            alt="collapse-arrow--v1" />
+                    </div>
+                    <div class="dropdown-content" id="dropdown-content">
+                        <div
+                            onclick="selectLanguage('en', 'English', 'http://static.albunack.net/images/flags/flags-iso/shiny/32/GB.png')">
+                            <img src="http://static.albunack.net/images/flags/flags-iso/shiny/32/GB.png" alt="English">
+                            English
+                        </div>
+                        <div
+                            onclick="selectLanguage('de', 'Deutsch', 'http://static.albunack.net/images/flags/flags-iso/shiny/32/DE.png')">
+                            <img src="http://static.albunack.net/images/flags/flags-iso/shiny/32/DE.png" alt="Deutsch">
+                            Deutsch
+                        </div>
+                        <div
+                            onclick="selectLanguage('es', 'Español', 'http://static.albunack.net/images/flags/flags-iso/shiny/32/ES.png')">
+                            <img src="http://static.albunack.net/images/flags/flags-iso/shiny/32/ES.png" alt="Español">
+                            Español
+                        </div>
+                        <div
+                            onclick="selectLanguage('fr', 'Français', 'http://static.albunack.net/images/flags/flags-iso/shiny/32/FR.png')">
+                            <img src="http://static.albunack.net/images/flags/flags-iso/shiny/32/FR.png" alt="Français">
+                            Français
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </footer>
+    </div>
+
+
+    <script>
+        function shopNow() {
+            alert("Redirecting to shop...");
+            window.location.href = "#";
+        }
+
+        document.getElementById("saveLater").addEventListener("click", function () {
+            let heartIcon = document.getElementById("heartIcon");
+            let saveText = document.getElementById("saveText");
+
+            this.classList.toggle("active");
+
+            if (this.classList.contains("active")) {
+                saveText.textContent = "Saved";
+                this.style.left = "850px";
+            } else {
+                saveText.textContent = "Save for later";
+                this.style.left = "835px";
+            }
+        });
+
+    </script>
+</body>
+</html>

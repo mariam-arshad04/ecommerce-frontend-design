@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--cloudflare icons  -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- css link -->
+    <link rel="stylesheet" href="homepage.css">
+    <!-- bootstrap footer link -->
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/footers/">
+     <!-- Bootstrap core CSS -->
+    <link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+
+    
+<!--for first navbar section-->
+  <nav class="navbar navbar-expand-lg primary-navbar fixed-top bg-white  mx-auto">
+    <div class="container-fluid mx-5">
+      <!-- <a class="navbar-brand" href="#">Offcanvas navbar</a> -->
+      <img src="images/user-options/logo-symbol.png" alt="logo" class="img-fluid" >
+      <h2 style="color: #93bbf5; margin-left: 10px;">Brand</h2 >
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color: #6b4f4f;">Brand</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                <li class="nav-item" style="margin-right: 30px;">
+                <a class="nav-link mx-lg-2" href="#" >
+                    <div class="d-flex w-100" style="border: #0872ff 2px solid; border-radius: 0;">
+                        <label for="Search" class="visually-hidden">Search</label>
+                        <input id="Search" type="text" class="form-control" placeholder="Search" style="width: 400px; border-color:#0872ff;">
+
+                        <label for="All category" class="visually-hidden">All category</label>
+                        <select name="All category" id="All category" style="width: 150px;">
+                          <option value="All category">All category</option>
+                          <option value="Electronics">Electronics</option>
+                          <option value="Smartphones">Smartphones</option>
+                          <option value="Modern tech">Modern tech</option>
+                        </select>
+
+                        <!-- <label for="All Category" class="visually-hidden">All Category </label>
+                        <input id="All Category" type="text" class="form-control" placeholder="All Category" style="width: 150px;"> -->
+                        <button class="btn btn-primary" type="button" style="background-color: #0872ff;">Search</button>
+                    </div>
+                </a>
+                </li>
+
+                <li class="nav-item" style="margin-left: 50px;">
+                <a class="nav-link nav-icons mx-lg-2 gap-4" href="#" style="display: flex; justify-content: center; align-items: center;" >
+                    <div>
+                        <img src="images/user-options/profile.png" alt="" height="20px" width="20px" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                        <p style="color: #bec4cc; font-weight: 500;" >Profile</p>
+                    </div>
+
+                    <div>
+                        <img src="images/user-options/message.png" alt="" height="20px" width="20px" style="display: flex; justify-content: center; align-items: center;">
+                        <p style="color: #bec4cc; font-weight: 500;">Message</p>
+                    </div>
+
+                    <div>
+                        <img src="images/user-options/heart.png" alt="" height="20px" width="20px" style="display: flex; justify-content: center; align-items: center;">
+                        <p style="color: #bec4cc; font-weight: 500;">Orders</p>
+                    </div>
+
+                    <div>
+                        <img src="images/user-options/cart.png" alt="" height="20px" width="20px" style="display: flex; justify-content: center; align-items: center;">
+                        <p style="color: #bec4cc; font-weight: 500;">My cart</p>
+                    </div>
+                </a>
+                </li>
+
+            </ul>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+<!-- for 2nd navbar -->
+<nav class="navbar navbar-expand-lg secondary-navbar bg-white">
+    <div class="container-fluid">
+      <!-- <a class="navbar-brand" href="#">Offcanvas navbar</a> -->
+      <!-- <img src="images/Logo.png" alt="logo" class="img-fluid"> -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color: black;">Brand</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav mb-2 mb-lg-0" style="margin-left: 35px;">
+                <li class="nav-item">
+                    <a class="nav-link all-category mx-lg-2" href="#">
+                        <img src="images/user-options/menu.png" alt="logo" class="img-fluid" height="25px" width="15px">
+                        <h2 style="color: black; font-size: medium; font-weight: 400; padding-top: 1px;">All category</h2 >
+                    </a>
+                </li>
+
+                <li class="nav-item second-component">
+                    <a class="nav-link mx-lg-2" href="#">Hot offers</a>
+                </li>
+                <li class="nav-item second-component">
+                    <a class="nav-link mx-lg-2" href="#">Gift boxes</a>
+                </li>
+                <li class="nav-item second-component">
+                    <a class="nav-link mx-lg-2" href="#">Projects</a>
+                </li>
+                <li class="nav-item second-component">
+                    <a class="nav-link mx-lg-2" href="#">Menu items</a>
+                </li>
+
+                <li class="nav-item third-component dropdown ">
+                    <a class="nav-link nav-products-link dropdown-toggle"  href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false" >
+                        Help
+                    </a>
+                    <ul class="dropdown-menu dropdown-products p-0">
+                        <li><a class="dropdown-item p-2" href="#">Information</a></li>
+                    </ul>
+                </li>
+            </ul>
+                
+            <!-- <ul class="navbar-nav mb-5 mb-lg-0">
+                
+            </ul> -->
+                
+            <ul class="navbar-nav" style="margin-left: 380px; gap: 3rem;">
+                <li class="nav-item third-component dropdown">
+                <a class="nav-link nav-account-link dropdown-toggle"  href="#" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    English, USD
+                </a>
+                <ul class="dropdown-menu p-0">
+                    <li><a class="dropdown-item p-2" href="#">English, Euro</a></li>
+                    <li class="dropdown-divider m-0"></li>
+                    <li><a class="dropdown-item p-2" href="#">English, Pkr</a></li>
+                </ul>
+                </li>
+
+                <li class="nav-item third-component dropdown me-5">
+                    <a class="nav-link nav-account-link dropdown-toggle" href="#" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Ship to <img src="images/user-options/flag.png" alt="">
+                    </a>
+                    
+                    <ul class="dropdown-menu p-0">
+                    <li><a class="dropdown-item p-2" href="#">Pakistan</a></li>
+                    <li class="dropdown-divider m-0"></li>
+                    <li><a class="dropdown-item p-2" href="#">America</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<div class="vertical-divider"></div> <!-- This will act as the separator -->
+
+<div class="main-div" style="background-color: #f7fafc; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <!-- first div the headphones one -->
+    <div class="first-div">
+        <!-- leftmost part -->
+        <div class="categories" style="height: 85%; padding-left: 10px;">
+            <p class="para" style="color: #7c7c7c;">Automobiles</p>
+            <p class="para" style="color: #7c7c7c;">Clothes and wear</p>
+            <p class="para" style="color: #7c7c7c;">Computer and tech</p>
+            <p class="para" style="color: #7c7c7c;">Tools, equipment</p>
+            <p class="para" style="color: #7c7c7c;">Sports and outdoor</p>
+            <p class="para" style="color: #7c7c7c;">Animal and pets</p>
+            <p class="para" style="color: #7c7c7c;">Machinery tools</p>
+            <p class="para" style="color: #7c7c7c;">More category</p>
+        </div>
+
+        <!-- middle part -->
+        <div class="headphones">
+            <h2>Latest trending</h2>
+            <h2 style="font-weight: bold;">Electronic items</h2>
+            <button class="headphone-button">Learn more</button>
+        </div>
+
+        <!-- rightmost part -->
+        <div class="user-blog" style="background-color: transparent;">
+            <!-- top part -->
+            <div class="top" style="background-color: #e3f0ff; border-radius: 10px; padding: 15px; margin-bottom: 10px;">
+                <div class="hi-user" style="display: flex; flex-direction: row; gap: 6px;">
+                    <img src="images/user-options/Avatar.png" alt="" height="50px" width="50px">
+                    <p>Hi, user <br>let's get stated</p>
+                </div>
+                <div class="both-buttons" style="display: flex; flex-direction: column; gap: 7px;">
+                    <button class="join-now">Join now</button>
+                    <button class="Login">Log in</button>
+                </div> 
+            </div>
+
+            <!-- middle part -->
+            <div class="middle" style="background-color: #f38332;border-radius: 10px; color: white; padding: 0px; margin-bottom: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 1px;">
+                <p>Get US $10 off <br>with a new <br>supplier</p>
+            </div>
+
+            <!-- bottom part -->
+            <div class="bottom" style="background-color: #55bdc3; color: white; border-radius: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 1px;">
+                <p>Send quotes with <br>supplier <br>preferences</p>
+            </div>
+        </div>
+
+    </div>
+    <!-- ended -->
+
+    <!-- the next div which has timer and products images thing -->
+    <div class="second-div" style="display: flex; flex-direction: row; align-items: stretch;">
+        <!-- part one -->
+        <div class="one" style="border-right: 2px solid #efefef; padding-right: 15px; padding-top: 20px;">
+            <h6 style="font-weight: bold;">Deals and offers <br><p style="color: #8b96a5; font-weight: 450;" >Hygiene equipments</p></h6>
+            <p ></p>
+            <!-- timers -->
+            <div class="timers" style="display: flex; flex-direction: row; gap: 7px;">
+                <!-- 1st timer -->
+                <div class="t">
+                    <p style="font-size: large; font-weight: bold;">04 <br><span style="font-weight: 300; font-size: medium;">Days</span></p>
+                </div>
+                <!-- 2nd timer -->
+                <div class="t" >
+                    <p style="font-size: large;font-weight: bold;">13 <br><span style="font-weight: 300; font-size: medium;">Hour</span></p>
+                </div>
+                <!-- 3rd timer -->
+                <div class="t">
+                    <p style="font-size: large;font-weight: bold;">34 <br><span style="font-weight: 300; font-size: medium;">Min</span></p>
+                </div>
+                <!-- 4th timer -->
+                <div class="t">
+                    <p style="font-size: large;font-weight: bold;">56 <br><span style="font-weight: 300; font-size: medium;">Sec</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- part two -->
+        <div class="two" style="display: flex; flex-direction: column; justify-content: center; align-items: center;border-right: 2px solid #efefef; padding-right: 10px; padding-bottom: 10px;">
+            <img src="images/tech/8.jpg" alt="" height="180px" width="170px">
+            <p>Smart watches</p>
+            <div class="discount" style="margin-top: -10px;">
+                <div style="background-color: #ffe3e3;justify-content: center; display: flex; border-radius: 15px; height: 27px;width: 65px;">
+                    <p style="color: #eb001b;">-25%</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- part three -->
+        <div class="two" style="display: flex; flex-direction: column; justify-content: center; align-items: center;border-right: 2px solid #efefef; padding-right: 10px; padding-bottom: 10px;">
+            <img src="images/tech/7.jpg" alt="" height="180px" width="170px">
+            <p>Laptops</p>
+            <div class="discount" style="margin-top: -10px;">
+                <div style="background-color: #ffe3e3;justify-content: center; display: flex; border-radius: 15px; height: 27px;width: 65px;">
+                    <p style="color: #eb001b;">-25%</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- part four -->
+        <div class="two" style="display: flex; flex-direction: column; justify-content: center; align-items: center;border-right: 2px solid #efefef; padding-right: 10px; padding-bottom: 10px;">
+            <img src="images/tech/6.jpg" alt="" height="180px" width="170px">
+            <p>GoPo cameras</p>
+            <div class="discount" style="margin-top: -10px;">
+                <div style="background-color: #ffe3e3;justify-content: center; display: flex; border-radius: 15px; height: 27px;width: 65px;">
+                    <p style="color: #eb001b;">-25%</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- part five -->
+        <div class="two" style="display: flex; flex-direction: column; justify-content: center; align-items: center;border-right: 2px solid #efefef; padding-right: 10px; padding-bottom: 10px;">
+            <img src="images/tech/5.jpg" alt="" height="180px" width="170px">
+            <p>Headphones</p>
+            <div class="discount" style="margin-top: -10px;">
+                <div style="background-color: #ffe3e3;justify-content: center; display: flex; border-radius: 15px; height: 27px;width: 65px;">
+                    <p style="color: #eb001b;">-25%</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- part six -->
+        <div class="two" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding-bottom: 10px;">
+            <img src="images/tech/3.jpg" alt="" height="180px" width="170px">
+            <p>Canon cameras</p>
+            <div class="discount" style="margin-top: -10px;">
+                <div style="background-color: #ffe3e3;justify-content: center; display: flex; border-radius: 15px; height: 27px;width: 65px;">
+                    <p style="color: #eb001b;">-25%</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- ended -->
+
+    <!-- the next div which has interior products images thing -->
+    <div class="third-div" style="display: flex; flex-direction: row; border: 3px solid #dee2e7; border-radius: 4px; margin-top: 20px;">
+        <!-- for left side -->
+        <div class="left-side-one">
+            <h5 style="font-weight: bold;">Home and <br>outdoor</h5>
+            <button class="source">Source now</button>
+        </div>
+
+        <!-- for right side -->
+        <div class="right-side-one" style="display: flex; flex-direction: column;">
+            <!-- top part of the right side -->
+            <div class="top-part" style="display: flex; flex-direction: row;">
+                <!-- first product -->
+                <div class="prd" style="background-color: white;display: flex; flex-direction: row; gap: 30px;">
+                    <div class="info" style="padding: 20px;">
+                        <p style="font-weight: 450;">Soft chairs</p>
+                        <p style="color: #8b96a5;">From <br>USD 19</p>
+                    </div>
+                    <div class="image">
+                        <img src="images/interior/1.jpg" alt="" height="100px" width="100px" style="margin-top: 30px;">
+                    </div>
+                </div>
+                <!-- second product -->
+                <div class="prd" style="background-color: white;display: flex; flex-direction: row; gap: 35px;">
+                    <div class="info" style="padding: 20px; padding-right:5px;">
+                        <p style="font-weight: 450;">Sofa & chair</p>
+                        <p style="color: #8b96a5;">From <br>USD 19</p>
+                    </div>
+                    <div class="image">
+                        <img src="images/interior/6.jpg" alt="" height="100px" width="100px" style="margin-top: 30px;">
+                    </div>
+                </div>
+                <!-- third product -->
+                <div class="prd" style="background-color: white;display: flex; flex-direction: row; gap: 20px;">
+                    <div class="info" style="padding: 20px; padding-right: 0px;">
+                        <p style="font-weight: 450;">Kitchen dishes</p>
+                        <p style="color: #8b96a5;">From <br>USD 19</p>
+                    </div>
+                    <div class="image">
+                        <img src="images/interior/5.jpg" alt="" height="100px" width="100px" style="margin-top: 30px;">
+                    </div>
+                </div>
+                <!-- fourth product -->
+                <div class="prd" style="background-color: white;display: flex; flex-direction: row; gap: 10px; border: none;">
+                    <div class="info" style="padding: 20px; padding-right: 3px;">
+                        <p style="font-weight: 450;">Smart watches</p>
+                        <p style="color: #8b96a5;">From <br>USD 19</p>
+                    </div>
+                    <div class="image">
+                        <img src="images/interior/3.jpg" alt="" height="100px" width="100px" style="margin-top: 30px;">
+                    </div>
+                </div>
+
+            </div>
+            <!-- top part done -->
+
+            <!-- bottom part of the right side -->
+            <div class="bottom-part" style="display: flex; flex-direction: row;">
+
+                <!-- first product -->
+                <div class="prd" style="background-color: white;display: flex; flex-direction: row; gap: 20px;">
+                    <div class="info" style="padding: 20px; padding-right: 5px;">
+                        <p style="font-weight: 450;">Kitchen mixer</p>
+                        <p style="color: #8b96a5;">From <br>USD 19</p>
+                    </div>
+                    <div class="image">
+                        <img src="images/interior/9.jpg" alt="" height="100px" width="100px" style="margin-top: 30px;">
+                    </div>
+                </div>
+                <!-- second product -->
+                <div class="prd" style="background-color: white;display: flex; flex-direction: row; gap: 35px;">
+                    <div class="info" style="padding: 20px;">
+                        <p style="font-weight: 450;">Blenders</p>
+                        <p style="color: #8b96a5;">From <br>USD 19</p>
+                    </div>
+                    <div class="image">
+                        <img src="images/interior/8.jpg" alt="" height="100px" width="100px" style="margin-top: 30px;">
+                    </div>
+                </div>
+                <!-- third product -->
+                <div class="prd" style="background-color: white;display: flex; flex-direction: row;">
+                    <div class="info" style="padding: 20px; padding-right: 10px;">
+                        <p style="font-weight: 450;">Home appliance</p>
+                        <p style="color: #8b96a5;">From <br>USD 19</p>
+                    </div>
+                    <div class="image">
+                        <img src="images/interior/7.jpg" alt="" height="100px" width="100px" style="margin-top: 30px;">
+                    </div>
+                </div>
+                <!-- fourth product -->
+                <div class="prd" style="background-color: white;display: flex; flex-direction: row; gap: 25px; border: none;">
+                    <div class="info" style="padding: 20px;padding-right: 1px;">
+                        <p style="font-weight: 450;">Coffee maker</p>
+                        <p style="color: #8b96a5;">From <br>USD 19</p>
+                    </div>
+                    <div class="image">
+                        <img src="images/interior/4.jpg" alt="" height="100px" width="100px" style="margin-top: 30px;">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- ended -->
+
+    <!-- the next fourth div which has electronics products images thing -->
+    <div class="fourth-div" style="display: flex; flex-direction: row; border: 3px solid #dee2e7; border-radius: 4px; margin-top: 20px;">
+        <!-- for left side -->
+        <div class="left-side-two">
+            <h5 style="font-weight: bold;">Consumer <br>electronics and <br>gadgets</h5>
+            <button class="source">Source now</button>
+        </div>
+
+        <!-- for right side -->
+        <div class="right-side-one" style="display: flex; flex-direction: column;">
+            <!-- top part of the right side -->
+            <div class="top-part" style="display: flex; flex-direction: row;">
+                <!-- first product -->
+                <div class="prd" style="background-color: white;display: flex; flex-direction: row; gap: 0px;">
+                    <div class="info" style="padding: 20px;padding-right: 5px;">
+                        <p style="font-weight: 450;">Smart Watches</p>
+                        <p style="color: #8b96a5;">From <br>USD 19</p>
+                    </div>
+                    <div class="image">
+                        <img src="images/tech/8.jpg" alt="" height="100px" width="100px" style="margin-top: 30px;">
+                    </div>
+                </div>
+                <!-- second product -->
+                <div class="prd" style="background-color: white;display: flex; flex-direction: row; gap: 35px;">
+                    <div class="info" style="padding: 20px; padding-right:5px;">
+                        <p style="font-weight: 450;">Cameras</p>
+                        <p style="color: #8b96a5;">From <br>USD 19</p>
+                    </div>
+                    <div class="image">
+                        <img src="images/tech/6.jpg" alt="" height="100px" width="100px" style="margin-top: 30px;">
+                    </div>
+                </div>
+                <!-- third product -->
+                <div class="prd" style="background-color: white;display: flex; flex-direction: row; gap: 20px;">
+                    <div class="info" style="padding: 20px; padding-right: 0px;">
+                        <p style="font-weight: 450;">Headphones</p>
+                        <p style="color: #8b96a5;">From <br>USD 19</p>
+                    </div>
+                    <div class="image">
+                        <img src="images/tech/9.jpg" alt="" height="100px" width="100px" style="margin-top: 30px;">
+                    </div>
+                </div>
+                <!-- fourth product -->
+                <div class="prd" style="background-color: white;display: flex; flex-direction: row; gap: 10px; border: none;">
+                    <div class="info" style="padding: 20px; padding-right: 3px;">
+                        <p style="font-weight: 450;">Smart watches</p>
+                        <p style="color: #8b96a5;">From <br>USD 19</p>
+                    </div>
+                    <div class="image">
+                        <img src="images/tech/10.jpg" alt="" height="100px" width="100px" style="margin-top: 30px;">
+                    </div>
+                </div>
+
+            </div>
+            <!-- top part done -->
+
+            <!-- bottom part of the right side -->
+            <div class="bottom-part" style="display: flex; flex-direction: row;">
+
+                <!-- first product -->
+                <div class="prd" style="background-color: white;display: flex; flex-direction: row; gap: 20px;">
+                    <div class="info" style="padding: 20px; padding-right: 5px;">
+                        <p style="font-weight: 450;">Gaming set</p>
+                        <p style="color: #8b96a5;">From <br>USD 19</p>
+                    </div>
+                    <div class="image">
+                        <img src="images/tech/5.jpg" alt="" height="100px" width="100px" style="margin-top: 30px;">
+                    </div>
+                </div>
+                <!-- second product -->
+                <div class="prd" style="background-color: white;display: flex; flex-direction: row;">
+                    <div class="info" style="padding: 20px;">
+                        <p style="font-weight: 450;">Laptops & PC</p>
+                        <p style="color: #8b96a5;">From <br>USD 19</p>
+                    </div>
+                    <div class="image">
+                        <img src="images/tech/7.jpg" alt="" height="100px" width="100px" style="margin-top: 30px;">
+                    </div>
+                </div>
+                <!-- third product -->
+                <div class="prd" style="background-color: white;display: flex; flex-direction: row;">
+                    <div class="info" style="padding: 20px; padding-right: 10px;">
+                        <p style="font-weight: 450;">Smartphones</p>
+                        <p style="color: #8b96a5;">From <br>USD 19</p>
+                    </div>
+                    <div class="image">
+                        <img src="images/tech/2.jpg" alt="" height="100px" width="100px" style="margin-top: 30px;">
+                    </div>
+                </div>
+                <!-- fourth product -->
+                <div class="prd" style="background-color: white;display: flex; flex-direction: row; gap: 25px; border: none;">
+                    <div class="info" style="padding: 20px;padding-right: 1px;">
+                        <p style="font-weight: 450;">Electric kattle</p>
+                        <p style="color: #8b96a5;">From <br>USD 19</p>
+                    </div>
+                    <div class="image">
+                        <img src="images/tech/1.jpg" alt="" height="100px" width="100px" style="margin-top: 30px;">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- ended -->
+
+    <!-- for next fifth div which is send quote to suppliers -->
+    <div class="fifth-div">
+        <!-- heading part -->
+        <div class="quote-info" style="padding: 50px;">
+            <h1 style="color: white;">An easy way to send <br>requests to all suppliers</h1>
+            <p style="color: white;">Lorem ipsum dolor sit amet consectetur adipisicing <br>elit natus, placeat delectus sed officiis recusandae.</p>
+        </div>
+        <!-- taking input part -->
+        <div class="quote-input">
+            <h5 style="font-weight: 650;">Send quote to suppliers</h5>
+            <div style="display: flex; flex-direction: column;  gap: 10px;">
+                <form action="" >
+                    <input type="text" id="need" class="need" name="need" placeholder="what item you need?">
+                </form>
+                <textarea id="details" class="details" name="details" rows="3" cols="42">Type more details</textarea>
+            </div>
+            
+
+            <div class="sub-taker">
+                <input type="text" id="need" class="quantity" name="quantity" placeholder="Quantity">
+                <select name="Pcs" class="Pcs" id="Pcs">
+                    <option value="Pcs">Pcs</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+            </div>
+
+            <div style="margin-top: 10px;">
+                <button class="taker-button">Send inquiry</button>
+            </div>
+            
+            
+
+        </div>
+    </div>
+    <!-- ended -->
+
+    <!-- sixth div which is showing the products -->
+    <div class="sixth-div" style="margin-top: 30px;">
+        <h2 style="font-weight: bold;">Recommended items</h2>
+        <!-- for products -->
+        <div class="products">
+
+            <!-- for top portion of products -->
+            <div class="top-products" style="display: flex; flex-direction: row; gap: 23px;">
+                <!-- product 1 -->
+                <div class="product">
+                    <img src="images/cloth/1.jpg" alt="">
+                    <p style="font-weight: 530; padding-left: 15px;">$10.30 <br><span style="color: #8b96a5; font-weight: 360;">T-shirts with multiple <br>colors, for men</span></p> 
+                </div>
+                <!-- product 2 -->
+                <div class="product">
+                    <img src="images/cloth/3.jpg" alt="">
+                    <p style="font-weight: 530; padding-left: 15px;">$10.30 <br><span style="color: #8b96a5; font-weight: 360;">Jeans shorts for men <br>blue color</span></p> 
+                </div>
+                <!-- product 3 -->
+                <div class="product">
+                    <img src="images/cloth/7.jpg" alt="">
+                    <p style="font-weight: 530; padding-left: 15px;">$12.50 <br><span style="color: #8b96a5; font-weight: 360;">Brown winter coat <br>medium size</span></p> 
+                </div>
+                <!-- product 4 -->
+                <div class="product">
+                    <img src="images/cloth/6.jpg" alt="">
+                    <p style="font-weight: 530; padding-left: 15px;">$34.00 <br><span style="color: #8b96a5; font-weight: 360;">Jeans bag for travel <br>for men</span></p> 
+                </div>
+                <!-- product 5 -->
+                <div class="product">
+                    <img src="images/cloth/5.jpg" alt="">
+                    <p style="font-weight: 530; padding-left: 15px;">$99.00 <br><span style="color: #8b96a5; font-weight: 360;">Leather wallet</span></p> 
+                </div>
+
+            </div>
+
+            <!-- for bottom portion of products -->
+            <div class="bottom-products" style="display: flex; flex-direction: row; gap: 23px; margin-top: 15px">
+                <!-- product 1 -->
+                <div class="product">
+                    <img src="images/cloth/4.jpg" alt="">
+                    <p style="font-weight: 530; padding-left: 15px;">$9.99 <br><span style="color: #8b96a5; font-weight: 360;">Canon camera <br>black, 100x zoom</span></p> 
+                </div>
+                <!-- product 2 -->
+                <div class="product">
+                    <img src="images/tech/9.jpg" alt="">
+                    <p style="font-weight: 530; padding-left: 15px;">$8.99 <br><span style="color: #8b96a5; font-weight: 360;">Headset fo gaming <br>with mic</span></p> 
+                </div>
+                <!-- product 3 -->
+                <div class="product">
+                    <img src="images/cloth/5.jpg" alt="">
+                    <p style="font-weight: 530; padding-left: 15px;">$10.30 <br><span style="color: #8b96a5; font-weight: 360;">Smartwatch <br>silver color modern</span></p> 
+                </div>
+                <!-- product 4 -->
+                <div class="product">
+                    <img src="images/interior/3.jpg" alt="">
+                    <p style="font-weight: 530; padding-left: 15px;">$10.30 <br><span style="color: #8b96a5; font-weight: 360;">Blue wallet for men <br>leather metarfial</span></p> 
+                </div>
+                <!-- product 5 -->
+                <div class="product">
+                    <img src="images/tech/10.jpg" alt="">
+                    <p style="font-weight: 530; padding-left: 15px;">$80.95 <br><span style="color: #8b96a5; font-weight: 360;">Jeans bag for travel <br>for men</span></p> 
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- ended -->
+
+    <!-- for seventh div which has our extra services -->
+    <div class="seventh-div" style="margin-top: 35px;">
+        <h2 style="font-weight: bold;">Our extra services</h2>
+        <div class="services-cards" style="display: flex; flex-direction: row; gap: 55px;">
+            <!-- for service 1 -->
+            <div class="service">
+                <div class="picture"><img src="images/cards-images/image 108.png" alt=""></div>
+                 <!-- for placing the icon in between both divs , put the icon div in the bottom div and make that icon div position absolute and the bottom div postion relative and do left and top adjustments in the icon div -->
+                <div class="service-info" style="background-color: white; padding: 8px 15px 1px 15px; position: relative;">
+                    <div class="common-image"><img src="images/icons/search.png" alt="" ></div>
+                    <p style="font-weight: 600;">Source from <br>Industry Hubs</p>
+                </div>
+            </div>
+            <!-- for service 2 -->
+            <div class="service">
+                <div class="picture"><img src="images/cards-images/image 104.png" alt=""></div>
+                <div class="service-info" style="background-color: white; padding: 8px 15px 1px 15px; position: relative;">
+                    <div class="common-image"><img src="images/icons/inventory_2.png" alt="" ></div>
+                    <p style="font-weight: 600;">Customize Your <br>Products</p>
+                </div>
+            </div>
+            <!-- for service 3 -->
+            <div class="service">
+                <div class="picture"><img src="images/cards-images/image 106.png" alt=""></div>
+                <div class="service-info" style="background-color: white; padding: 8px 15px 1px 15px; position: relative;">
+                    <div class="common-image"><img src="images/icons/send.png" alt="" ></div>
+                    <p style="font-weight: 600;">Fast, reliable shipping <br>by ocean and air</p>
+                </div>
+            </div>
+            <!-- for service 3 -->
+            <div class="service">
+                <div class="picture"><img src="images/cards-images/image 107.png" alt=""></div>
+                <div class="service-info" style="background-color: white; padding: 8px 15px 1px 15px; position: relative;">
+                    <div class="common-image"><img src="images/icons/security.png" alt="" ></div>
+                    <p style="font-weight: 600;">Product monitoring <br>and inspection</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- ended -->
+
+    <!-- for eigth div which has flags -->
+    <div class="eigth-div">
+        <h2 style="font-weight: bold;">Suppliers by region</h2>
+        <div class="all-flags" style="display: flex; flex-direction: column; gap: 15px;">
+
+            <!-- for top portion of flags -->
+            <div class="top-flags" style="display: flex; flex-direction: row; gap: 3rem;">
+                <!-- flag1 -->
+                <div class="flag" style="display: flex; flex-direction: row; gap: 15px;">
+                    <div class="flag-image" style="margin-top: -10px;"><img src="public/flags/dubai.png" alt="" height="60px" width="65px"></div>
+                    <div class="flag-info">
+                        <p style="margin-bottom: -16px;">Arabic Emirates <br><span style="font-size: smaller; color: #8b96a5;">shopname.ae</span></p>
+                    </div>
+                </div>
+                <!-- flag2 -->
+                <div class="flag" style="display: flex; flex-direction: row; gap: 15px;">
+                    <div class="flag-image" style="margin-top: -10px;"><img src="public/flags/australia.png" alt="" height="60px" width="60px"></div>
+                    <div class="flag-info">
+                        <p style="margin-bottom: -16px;">Arabic Emirates <br><span style="font-size: smaller; color: #8b96a5;">shopname.ae</span></p>
+                    </div>
+                </div>
+                <!-- flag3 -->
+                <div class="flag" style="display: flex; flex-direction: row; gap: 15px;">
+                    <div class="flag-image" style="margin-top: -10px;"><img src="public/flags/usa.png" alt="" height="60px" width="60px"></div>
+                    <div class="flag-info">
+                        <p style="margin-bottom: -16px;">United States <br><span style="font-size: smaller; color: #8b96a5;">shopname.ae</span></p>
+                    </div>
+                </div>
+                <!-- flag4 -->
+                <div class="flag" style="display: flex; flex-direction: row; gap: 15px;">
+                    <div class="flag-image" style="margin-top: -10px;"><img src="public/flags/russia.png" alt="" height="60px" width="60px"></div>
+                    <div class="flag-info">
+                        <p style="margin-bottom: -16px;">Russia <br><span style="font-size: smaller; color: #8b96a5;">shopname.ru</span></p>
+                    </div>
+                </div>
+                <!-- flag5 -->
+                <div class="flag" style="display: flex; flex-direction: row; gap: 15px;">
+                    <div class="flag-image" style="margin-top: -10px;"><img src="public/flags/itlay.png" alt="" height="60px" width="60px"></div>
+                    <div class="flag-info">
+                        <p style="margin-bottom: -16px;">Italy <br><span style="font-size: smaller; color: #8b96a5;">shopname.it</span></p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- for bottom portion of flags -->
+            <div class="top-flags" style="display: flex; flex-direction: row; gap: 3rem;">
+                <!-- flag1 -->
+                <div class="flag" style="display: flex; flex-direction: row; gap: 15px;">
+                    <div class="flag-image" style="margin-top: -10px;"><img src="public/flags/denmark.png" alt="" height="60px" width="60px"></div>
+                    <div class="flag-info">
+                        <p style="margin-bottom: -16px;">Denmark <br><span style="font-size: smaller; color: #8b96a5;">denmark.com.dk</span></p>
+                    </div>
+                </div>
+                <!-- flag2 -->
+                <div class="flag" style="display: flex; flex-direction: row; gap: 15px;">
+                    <div class="flag-image" style="margin-top: -10px;"><img src="public/flags/france.png" alt="" height="60px" width="60px"></div>
+                    <div class="flag-info">
+                        <p style="margin-bottom: -16px;">France <br><span style="font-size: smaller; color: #8b96a5;">shopname.com.fr</span></p>
+                    </div>
+                </div>
+                <!-- flag3 -->
+                <div class="flag" style="display: flex; flex-direction: row; gap: 15px;">
+                    <div class="flag-image" style="margin-top: -10px;"><img src="public/flags/dubai.png" alt="" height="60px" width="65px"></div>
+                    <div class="flag-info">
+                        <p style="margin-bottom: -16px;">Arabic Emirates <br><span style="font-size: smaller; color: #8b96a5;">shopname.ae</span></p>
+                    </div>
+                </div>
+                <!-- flag4 -->
+                <div class="flag" style="display: flex; flex-direction: row; gap: 15px;">
+                    <div class="flag-image" style="margin-top: -10px;"><img src="public/flags/china.png" alt="" height="60px" width="60px"></div>
+                    <div class="flag-info">
+                        <p style="margin-bottom: -16px;">China <br><span style="font-size: smaller; color: #8b96a5;">shopname.ae</span></p>
+                    </div>
+                </div>
+                <!-- flag5 -->
+                <div class="flag" style="display: flex; flex-direction: row; gap: 15px;">
+                    <div class="flag-image" style="margin-top: -10px;"><img src="public/flags/england.png" alt="" height="60px" width="60px"></div>
+                    <div class="flag-info">
+                        <p style="margin-bottom: -16px;">Great Britian <br><span style="font-size: smaller; color: #8b96a5;">shopname.co.uk</span></p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- for footer -->
+<div class="footer-container" style="padding-top: 50px; width: 100%;">
+    <footer class="py-4">
+        <div class="row" style="padding-left: 60px; padding-right: 60px;display: flex; justify-content: center;">
+            <div class="col-2" style="padding-right: 30px;">
+                <div class="image-and-name" style="display: flex; ; gap: 10px; padding-bottom: 15px;">
+                    <img src="images/user-options/logo-symbol.png" alt="logo" class="img-fluid" >
+                    <h2 style="color: #93bbf5;">Brand</h2>
+                </div>
+                <div class="footer-brand-content"><p style="color: #666666; text-align: justify;">Best information about the company gies here but now lorem ipsum is</p></div>
+                <div class="right">
+                    <img width="24" height="24" src="https://img.icons8.com/material/24/bdc4cd/facebook-new.png" alt="facebook-new"/>
+                    <img width="24" height="24" src="https://img.icons8.com/material/24/bdc4cd/twitter--v2.png" alt="twitter--v2"/>
+                    <img width="24" height="24" src="https://img.icons8.com/material/24/bdc4cd/linkedin--v1.png" alt="linkedin--v1"/>
+                    <img width="24" height="24" src="https://img.icons8.com/material/24/bdc4cd/instagram.png" alt="instagram"/>
+                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/bdc4cd/youtube-play.png" alt="youtube-play"/>
+                </div>
+            </div>
+        
+  
+            <div class="col-2" style="padding-left: 40px;">
+            <h5>About</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">About Us</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Find store</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Categories</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Blogs</a></li>
+            </ul>
+            </div>
+  
+            <div class="col-2">
+            <h5>Partnership</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">About Us</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Find Store</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Categories</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Blogs</a></li>
+            </ul>
+            </div>
+
+            <div class="col-2">
+                <h5>Information</h5>
+                <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Help Center</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Money Refund</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Shipping</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="col-2">
+                <h5>For Users</h5>
+                <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Login</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Register</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">Settings</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link">My Orders</a></li>
+                </ul>
+            </div>
+
+            <div class="col-2">
+                <h5>Get app</h5>
+                <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link"><img src="images/user-options/apple.png" alt="" height="50px" width="145px"></a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted footer-link"><img src="images/user-options/google.png" alt="" height="53px" width="145px" ></a></li>
+                </ul>
+            </div>
+
+        </div>
+  
+        <div class="d-flex justify-content-between py-4 my-4" style="background-color: #eff2f4; padding: 100px;">
+            <p style="color: #666666;">&copy; 2023 Ecommerce.</p>
+            <!-- <div style="display: flex;">
+
+                <select name="English" id="English" style="color: #666666; padding-top: 7px; border: none; background-color: transparent;">
+                    <option value="English"><img src="public/flags/usa.png" alt="" height="40px">English</option>
+                </select>
+                <p >English</p>
+            </div> -->
+            <div class="dropdown" style="color: #666666; border: none;">
+                <div class="dropdown-btn" onclick="toggleDropdown()">
+                    <img id="selected-flag" src="http://static.albunack.net/images/flags/flags-iso/shiny/32/GB.png" alt="English">
+                    <span id="selected-language">English</span>
+                    <img width="24" height="24" src="https://img.icons8.com/material/24/collapse-arrow--v1.png" alt="collapse-arrow--v1"/>
+                </div>
+                <div class="dropdown-content" id="dropdown-content">
+                    <div onclick="selectLanguage('en', 'English', 'http://static.albunack.net/images/flags/flags-iso/shiny/32/GB.png')">
+                        <img src="http://static.albunack.net/images/flags/flags-iso/shiny/32/GB.png" alt="English"> English
+                    </div>
+                    <div onclick="selectLanguage('de', 'Deutsch', 'http://static.albunack.net/images/flags/flags-iso/shiny/32/DE.png')">
+                        <img src="http://static.albunack.net/images/flags/flags-iso/shiny/32/DE.png" alt="Deutsch"> Deutsch
+                    </div>
+                    <div onclick="selectLanguage('es', 'Español', 'http://static.albunack.net/images/flags/flags-iso/shiny/32/ES.png')">
+                        <img src="http://static.albunack.net/images/flags/flags-iso/shiny/32/ES.png" alt="Español"> Español
+                    </div>
+                    <div onclick="selectLanguage('fr', 'Français', 'http://static.albunack.net/images/flags/flags-iso/shiny/32/FR.png')">
+                        <img src="http://static.albunack.net/images/flags/flags-iso/shiny/32/FR.png" alt="Français"> Français
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </footer>
+</div>
+
+
+<script src="home.js"></script>
+<script>
+    function toggleDropdown() {
+        document.getElementById("dropdown-content").style.display = 
+            document.getElementById("dropdown-content").style.display === "block" ? "none" : "block";
+    }
+
+    function selectLanguage(lang, name, flagUrl) {
+        document.getElementById("selected-language").innerText = name;
+        document.getElementById("selected-flag").src = flagUrl;
+        document.getElementById("dropdown-content").style.display = "none";
+        
+        // Redirect to the selected language page
+        // window.location.href = `http://www.jthink.net/songkong/${lang}`;
+    }
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", function(event) {
+        if (!event.target.closest(".dropdown")) {
+            document.getElementById("dropdown-content").style.display = "none";
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,572 @@
+*{
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: "Inter", sans-serif;
+}
+/* for navbar */
+.navbar {
+    z-index: 1050; /* Ensures both navbars are above other content */
+}
+
+.primary-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1060; /* Higher than secondary-navbar */
+}
+
+
+
+.container-fluid .img-fluid img{
+    height: 40px;
+    width: 40px;
+}
+
+/* for search bar in header */
+/* Style the footer links */
+.footer-link {
+    /* color: #666666; */
+    text-decoration: none;
+}
+.form-control {
+    border-radius: 0 !important; /* Remove curved edges */
+    border: 1px solid #0872ff !important; /* Ensure blue border */
+    box-shadow: none !important; /* Remove focus shadow */
+}
+
+/* Keep blue border when clicking */
+.form-control:focus {
+    outline: none !important;
+    border: 1px solid #0872ff !important;
+    /*box-shadow: 0 0 5px #0872ff !important;  Slight glow effect */
+}
+
+/* Keep button styling consistent */
+.btn {
+    border-radius: 0 !important;
+    border: 1px solid #0872ff !important; /* Match input fields */
+}
+
+/* Ensure All Category text stays black */
+.category-input {
+    color: black !important;
+}
+
+/* for the icons in 1st navbar */
+.nav-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 30px;  Adjust spacing between items */ 
+}
+
+.nav-icons div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* for second navbar */
+
+/* for all category alignment */
+.all-category {
+    display: flex;
+    align-items: center;
+    gap: 14px; /* Adjust space between icon and text */
+}
+
+.all-category img {
+    width: 20px;
+    height: 17px;
+}
+
+.all-category a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: large; /* Adjust as needed */
+}
+
+
+
+
+.secondary-navbar {
+    position: relative; /* Change from default */
+    margin-top: 80px; /* Pushes it below the first navbar */
+    z-index: 1050; /* Lower than first navbar */
+}
+
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #d9e8ff;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.nav-item:hover .dropdown-menu {
+    display: block;
+  }
+
+.nav-account-link{
+    display: block;
+    background-color:white; 
+    /* border: 2px solid #6b4f4f; */
+    color: black; 
+    transition: 0.3s ease; 
+    text-decoration: none;
+}
+/* .nav-account-link:hover{
+    color: #d9e8ff;
+    background-color: #0872ff;
+    text-decoration: none;
+} */
+
+.dropdown-menu a+a{
+    background-color: white;
+    color: black;
+    border: 1px solid #0872ff;
+}
+
+.dropdown-menu{
+    background-color: white;
+    border: 1px solid #0872ff;
+    
+}
+
+.dropdown-menu .dropdown-item{
+    color: black;
+    font-size: medium;
+    font-weight: 400;
+    
+}
+
+.dropdown-menu li:hover {
+    background-color: #d9e8ff;
+}
+
+.dropdown-menu li:hover .dropdown-item{
+    background-color: inherit;
+}
+
+
+.second-component a{
+    font-weight:400;
+    font-size:medium;
+    /* color: #6b4f4f; */
+    transition: 0.3s ease;
+    color: black;
+}
+
+.secondary-navbar .second-component a:hover {
+    box-shadow:0 3px 0 0 #0872ff;
+    color: #0872ff;
+} 
+
+.secondary-navbar .third-component a{
+    color: black;
+}
+
+.secondary-navbar .third-component a:hover {
+    /* box-shadow:0 3px 0 0 #0872ff; */
+    color: #0872ff;
+    transition: 0.3s ease; 
+} 
+
+/* .nav-item a.active {
+    box-shadow: 0 3px 0 0 #0872ff;
+} */
+
+/* .nav-products-link{
+    display: block;
+    background-color:white; 
+    
+    color: #0872ff ; 
+    transition: 0.3s ease; 
+     text-decoration: none; 
+} */
+
+/* @media(min-width:992px){
+    .navbar-expand-lg .nabar-nav{
+        flex-direction: row;
+    }
+} */
+
+/* for main navabr div */
+
+
+
+/* for divider between navbars */
+.vertical-divider {
+    width: 100%;
+    height: 1px;  /* This makes it a horizontal line */
+    background-color: #bec4cc; /* Adjust the color */
+    margin: 0;
+}
+
+
+
+/* for footer */
+ /* Style the footer links */
+ .footer-link {
+    color: #666666;
+    text-decoration: none;
+}
+
+/* Apply hover effect */
+.footer-link:hover {
+    color: #000000 !important;
+}
+
+/* Ensure nav-link also inherits the hover effect */
+.nav-link.footer-link:hover {
+    color: #000000 !important;
+}
+
+.footer-brand img {
+    width: 50px;
+    height: 50px;
+}
+
+.footer-container {
+    width: 100% !important;
+}
+
+.footer-container .row{
+    gap: -29px;
+}
+
+/* for language selection in footer */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    /* border: 1px solid #ccc; */
+    padding: 5px;
+    cursor: pointer;
+    min-width: 150px;
+    background-color: transparent; /* Make background transparent */
+}
+
+.dropdown-btn img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    min-width: 150px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content div {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.dropdown-content div:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-content img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+/* for main content divs right side */
+.divider {
+    width: 90%;
+    height: 1px;  /* This makes it a horizontal line */
+    background-color: #bec4cc; /* Adjust the color */
+    margin: 20px;
+}
+
+/* for collapsible */
+.collapsible {
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    /* width: 100%; */
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  /* .active, .collapsible:hover {
+    background-color: #555;
+    color: white;
+  } */
+
+  .collapsible:hover {
+    background-color: #afd0ff;
+    color: #0d6efd !important;
+    transition: 0.3s ease;
+  }
+  
+  .collapsible:after {
+    content: '\002B';
+    color: transparent;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2212";
+  }
+  
+  .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: transparent;
+  }
+
+  /* for stars ratings */
+  .checked {
+    color: #ff9017;
+  }
+
+  /* for range slider */
+  ::selection{
+    color: #fff;
+    background: #17A2B8;
+  }
+  .wrapper{
+    
+    padding: 20px 0px 40px;
+    
+  }
+ 
+  .price-input{
+    width: 100%;
+    display: flex;
+    /* margin: 30px 0 35px; */
+  }
+  .price-input .field{
+    display: flex;
+    /* width: 100%;
+    height: 45px; */
+    /* align-items: center; */
+  }
+  .field input{
+    width: 80px;
+    color: #bdc4cd;
+    font-size: medium;
+    /* height: 100%; */
+    outline: none;
+    /* font-size: 19px; */
+    /* margin-left: 12px; */
+    border-radius: 9% !important;
+    text-align: center;
+    border: 1px solid #e1e5ea;
+    /* -moz-appearance: textfield; */
+  }
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+ 
+  .slider{
+    height: 5px;
+    position: relative;
+    background: #afd0ff;
+    border-radius: 5px;
+  }
+  .slider .progress{
+    height: 100%;
+    left: 255%;
+    right: 25%;
+    position: absolute;
+    border-radius: 5px;
+    background: #0d6efd;
+  }
+  .range-input{
+    position: relative;
+  }
+  .range-input input{
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    top: -5px;
+    background: none;
+    pointer-events: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  input[type="range"]::-webkit-slider-thumb{
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+    background: #0d6efd;
+    pointer-events: auto;
+    -webkit-appearance: none;
+    /* box-shadow: 0 0 6px rgba(0,0,0,0.05); */
+  }
+  input[type="range"]::-moz-range-thumb{
+    height: 17px;
+    width: 17px;
+    border: none;
+    border-radius: 50%;
+    background: #0d6efd;
+    pointer-events: auto;
+    -moz-appearance: none;
+    /* box-shadow: 0 0 6px rgba(0,0,0,0.05); */
+  }
+
+/* for display-type-box button */
+.display-type-box{
+    border:3px solid #dee2e7 ;
+    border-radius: 6px;
+    padding: 4px;
+    margin-bottom: 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.grid-list-divider{
+    width: 1px; /* Thin line */
+    height: 100%; /* Full height */
+    background-color: #bec4cc; /* Adjust color */
+    /*margin: 0 10px;  Add space around it */
+}
+
+
+
+
+/* for right side */
+.right-side .first-part{
+    background-color: white;
+    padding: 10px;
+    border: 3px solid #dee2e7 ;
+    border-radius: 6px;
+}
+
+/* for  middle part */
+/* for cards styling */
+.first-card, .second-card, .third-card, .fourth-card, .fifth-card, .sixth-card{
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+    border: 3px solid #dee2e7 ;
+    border-radius: 6px;
+}
+.cut-text {
+    text-decoration: line-through;
+}
+
+.circle-text::before,
+.circle-text::after {
+    content: "●"; /* Unicode circle */
+    font-size: 12px; /* Adjust size */
+    vertical-align: middle; /* Align with text */
+    margin: 0 5px; /* Spacing */
+    margin-bottom: 3px;
+    color: #dee2e7;
+}
+
+.heart-button{
+    border:3px solid #dee2e7 ;
+    border-radius: 6px;
+    padding: 4px;
+    padding-bottom: -20px;
+    margin-bottom: 0px;
+    justify-content: center;
+    align-items: center;
+    /* gap: 4px; */
+    background-color: white;
+    box-shadow: 0px 0px 6px #f4f4f4;
+}
+
+/* for bottommost part of the page for page selector */
+.pagination {
+    display: flex;
+    align-items: center;
+    /* gap: 6px; */
+    border: 2px solid #dee2e7;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #eff2f4;
+    color: white;
+    border: none;
+    /* padding-right: 3px;
+    padding-left: 3px; */
+    cursor: pointer;
+    /* font-size: 18px; */
+    border-radius: 5px;
+    /* border: 1px solid #8b96a5; */
+    background-color: white;
+}
+
+button:hover {
+    background-color: #eff2f4;
+    /* color: #8b96a5 !important; */
+    transition: 0.2s ease;
+}
+
+.page-number {
+    padding: 4px 8px;
+    /* border-radius: 5px; */
+    /* font-size: 18px; */
+    cursor: pointer;
+    border: 2px solid #dee2e7;
+    background-color: white;
+}
+
+
+
+.page-number.active {
+    
+    background-color: #eff2f4;
+    color: #8b96a5;
+}
+
+
+
+ /*  for newsletter part button */
+.news-email{
+    background-image: url(https://img.icons8.com/material-outlined/24/8b96a5/new-post.png); /* Icon URL */
+    background-position: 10px center; /* Position inside input */
+    background-repeat: no-repeat;
+    background-size: 24px; /* Adjust icon size */
+    text-indent: 30px; /* Ensure text doesn't overlap the icon */
+    height: 40px;
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+}
+.news-button{
+    background-color:#0872ff; 
+    color: white;
+    border-radius: 5px; 
+    padding: 7px; 
+    width: 100px;
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition for border color */
+    border: 1px solid transparent; /* Add a transparent border */
+}
+.news-button:hover{
+    color:#0872ff ;
+    background-color: white;
+    border: 1px solid #0872ff;
+}

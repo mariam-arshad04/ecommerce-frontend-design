@@ -1,0 +1,797 @@
+*{
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: "Inter", sans-serif;
+    /* width: 100%; */
+}
+/* for navbar */
+.navbar {
+    z-index: 1050; /* Ensures both navbars are above other content */
+}
+
+.primary-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1060; /* Higher than secondary-navbar */
+}
+
+
+
+.container-fluid .img-fluid img{
+    height: 40px;
+    width: 40px;
+}
+
+/* for search bar in header */
+/* Style the footer links */
+.footer-link {
+    /* color: #666666; */
+    text-decoration: none;
+}
+.form-control {
+    border-radius: 0 !important; /* Remove curved edges */
+    border: 1px solid #0872ff !important; /* Ensure blue border */
+    box-shadow: none !important; /* Remove focus shadow */
+}
+
+/* Keep blue border when clicking */
+.form-control:focus {
+    outline: none !important;
+    border: 1px solid #0872ff !important;
+    /*box-shadow: 0 0 5px #0872ff !important;  Slight glow effect */
+}
+
+/* Keep button styling consistent */
+.btn {
+    border-radius: 0 !important;
+    border: 1px solid #0872ff !important; /* Match input fields */
+}
+
+/* Ensure All Category text stays black */
+.category-input {
+    color: black !important;
+}
+
+/* for the icons in 1st navbar */
+.nav-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 30px;  Adjust spacing between items */ 
+}
+
+.nav-icons div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* for second navbar */
+
+/* for all category alignment */
+.all-category {
+    display: flex;
+    align-items: center;
+    gap: 14px; /* Adjust space between icon and text */
+}
+
+.all-category img {
+    width: 20px;
+    height: 17px;
+}
+
+.all-category a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: large; /* Adjust as needed */
+}
+
+
+
+
+.secondary-navbar {
+    position: relative; /* Change from default */
+    margin-top: 80px; /* Pushes it below the first navbar */
+    z-index: 1050; /* Lower than first navbar */
+}
+
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #d9e8ff;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.nav-item:hover .dropdown-menu {
+    display: block;
+  }
+
+.nav-account-link{
+    display: block;
+    background-color:white; 
+    /* border: 2px solid #6b4f4f; */
+    color: black; 
+    transition: 0.3s ease; 
+    text-decoration: none;
+}
+/* .nav-account-link:hover{
+    color: #d9e8ff;
+    background-color: #0872ff;
+    text-decoration: none;
+} */
+
+.dropdown-menu a+a{
+    background-color: white;
+    color: black;
+    border: 1px solid #0872ff;
+}
+
+.dropdown-menu{
+    background-color: white;
+    border: 1px solid #0872ff;
+    
+}
+
+.dropdown-menu .dropdown-item{
+    color: black;
+    font-size: medium;
+    font-weight: 400;
+    
+}
+
+.dropdown-menu li:hover {
+    background-color: #d9e8ff;
+}
+
+.dropdown-menu li:hover .dropdown-item{
+    background-color: inherit;
+}
+
+
+.second-component a{
+    font-weight:400;
+    font-size:medium;
+    /* color: #6b4f4f; */
+    transition: 0.3s ease;
+    color: black;
+}
+
+.secondary-navbar .second-component a:hover {
+    box-shadow:0 3px 0 0 #0872ff;
+    color: #0872ff;
+} 
+
+.secondary-navbar .third-component a{
+    color: black;
+}
+
+.secondary-navbar .third-component a:hover {
+    /* box-shadow:0 3px 0 0 #0872ff; */
+    color: #0872ff;
+    transition: 0.3s ease; 
+} 
+
+/* for divider between navbars */
+.vertical-divider {
+    width: 100%;
+    height: 1px;  /* This makes it a horizontal line */
+    background-color: #bec4cc; /* Adjust the color */
+    margin: 0;
+}
+
+
+/* web-details */
+.webDetails {
+    background-color: #f8f9fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 1700px;
+}
+
+.menCloth {
+    border: 1px solid rgb(203, 203, 203);
+    border-radius: 6px;
+    position: absolute;
+    left: 115px;
+    top: 185px;
+    background-color: white;
+    width: 1050px;
+    height: 533px;
+    display: flex;
+    flex-direction: row;
+}
+
+.shirtImage {
+    padding: 18px;
+    width: 250px;
+}
+
+.shirtImage img {
+    width: 333px;
+}
+
+.menCloth .left {
+    display: flex;
+    flex-direction: column;
+    width: 366px;
+}
+
+.shirtGallery {
+    padding-left: 18px;
+}
+
+.shirtGallery img{
+    width: 333px;
+}
+
+.middle {
+    width: 430px;
+    height: 460px;
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.price-container {
+    margin-top: 10px;
+    display: flex;
+    background: #fdecd7; 
+    padding: 15px;
+    justify-content: space-around;
+    align-items: center;
+    width: fit-content;
+    border: 1px solid #ddd;
+    width: 370px;
+    height: 60px;
+}
+
+.price-box {
+    text-align: left;
+    padding-right: 30px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+}
+
+.price.red {
+    color: red;
+}
+
+.quantity {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+.price-container .divider {
+    width: 1px;
+    height: 40px;
+    background: #ccc;
+}
+
+.product-details {
+    background: white;
+    margin: 15px 15px;
+    width: 340px;
+}
+
+.product-details .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 7px 0;
+    
+}
+
+.product-details .label {
+    color: #8B96A5;
+    font-size: 15px;
+    width: 120px;
+    padding-left: 0;
+}
+
+.product-details .value {
+    color: #6b6868;
+    size: 100px;
+    font-size: 15px;
+}
+
+.right {
+    border: 1px solid rgb(203, 203, 203);
+    border-radius: 6px;
+    position: absolute;
+    left: 750px;
+    top: 20px;
+    background-color: white;
+    width: 280px;
+    height: 295px;
+    display: flex;
+    flex-direction: column;
+}
+
+.supplier {
+    margin: 15px;
+    display: flex;
+    flex-direction: row;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    border-bottom: 1px solid rgb(203, 203, 203);
+    padding-bottom: 18px;
+}
+
+.supplier img {
+    width: 45px;
+    height: 45px;
+}
+
+.supplier span {
+    padding-left: 12px;
+    color: #1c1c1c;
+    align-items: center;
+    padding-top: 2px;
+}
+
+.place {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin: 0 15px ;
+}
+
+.place .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.place .row span {
+    color: #9fa9b7;
+    size: 100px;
+    font-size: 15px;
+    padding-top: 4px;
+}
+
+.place .row .image {
+    width: 34px;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    align-items: center;
+    margin-top: 25px;
+}
+
+.primary-btn {
+    width: 250px;
+    padding: 6px 20px;
+    background-color: #007BFF; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    background-color: #0056b3; 
+}
+
+.secondary-btn {
+    width: 250px;
+    padding: 3px 20px;
+    background-color: white;
+    color: #007BFF;
+    border: 2px solid #E0E0E0; 
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.secondary-btn:hover {
+    background-color: #F8F9FA; 
+}
+
+.later {
+    position: absolute;
+    top: 330px;
+    left: 835px;
+
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.later span {
+    color: #007BFF;
+    font-size: 14px;
+    padding-left: 5px;
+}
+
+.later img {
+    width: 16px; /* Adjust size as needed */
+    height: 16px;
+    transition: 0.3s;
+    /* filter: brightness(0) saturate(100%); / */
+}
+
+
+.later.active img {
+    filter: brightness(0) saturate(100%) invert(12%) sepia(98%) saturate(7483%) hue-rotate(359deg) brightness(94%) contrast(113%);
+    /* This filter turns the image red */
+}
+
+.later.active span {
+    color: red;
+}
+
+
+.description {
+    border: 1px solid rgb(203, 203, 203);
+    border-radius: 6px;
+    position: absolute;
+    left: 115px;
+    top: 736px;
+    right: 0;
+    background-color: white;
+    width: 781px;
+    height: 544px;
+
+}
+
+.frontBar {
+    display: flex;
+    border-bottom: 2px solid #f4efef;
+    /* padding-bottom: 5px; */
+    height: 40px;
+}
+
+.Tab {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    /* color: #ffffff; */
+    position: relative;
+    color: #8B96A5;
+    font-size: 15px;
+}
+
+.contents {
+    color: #6b6868;
+    font-size: 15px;
+    padding: 20px;
+    margin-right: 60px;
+    line-height: 20px;
+}
+
+.table {
+    margin: 20px;
+    margin-top: 0;
+}
+
+.info-table {
+    width: 500px;
+    border-collapse: collapse;
+    /* font-size: 15px; */
+    color: #6b6868;
+    padding: 20px;
+}
+
+.info-table td {
+    border: 1px solid #ddd;
+    color: #6b6868;
+    padding: 5px 7px;
+    /* font-size: 15px; */
+}
+
+.info-table tr td:first-child {
+    background-color: #EFF2F4;
+    /* font-weight: bold; */
+    width: 37%;
+}
+
+.tickContent {
+    /* width: 100px; */
+    /* height: 100px; */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #6b6868;
+    font-size: 15px;
+    margin: 20px;
+}
+
+.tickContent .content {
+    padding-bottom: 6px;
+}
+
+.tickContent .content span {
+    padding-left: 7px;
+}
+
+.youMayLike {
+    border: 1px solid rgb(203, 203, 203);
+    border-radius: 6px;
+    position: absolute;
+    left: 913px;
+    top: 736px;
+    background-color: white;
+    width: 252px;
+    height: 492px;
+    display: flex;
+    flex-direction: column; 
+}
+
+.mainLine {
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+    font-family: Inter;
+    margin: 12px;
+}
+
+.youMayLike .shirtHere {
+    display: flex;
+    flex-direction: row;
+}
+
+.youMayLike .shirtHere .contains {
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.youMayLike .shirtHere .image img{
+    width: 70px;
+}
+
+.youMayLike .shirtHere .image{
+    padding: 0px 15px 14px 15px;
+}
+
+.youMayLike .shirtHere .contains .grey {
+    color: #8B96A5;
+}
+
+.contains .black {
+    display: block;
+    margin-bottom: 0px;
+    line-height: 1.2; 
+}
+
+.contains .grey {
+    padding-top: 4px;
+}
+
+.youMayLike .shirtHere .image img {
+    width: 70px;
+    transition: transform 0.3s ease-in-out; /* Smooth animation */
+}
+
+.youMayLike .shirtHere .image img:hover {
+    transform: translateY(-5px); /* Lifts image up by 5px */
+    cursor: pointer;
+}
+
+
+.related-detail {
+    border: 1px solid rgb(203, 203, 203);
+    border-radius: 6px;
+    position: absolute;
+    left: 115px;
+    top: 1299px;
+    right: 0;
+    background-color: white;
+    width: 1050px;
+    height: 304px;
+    display: flex;
+    flex-direction: column;
+}
+
+.related-detail .details {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 12px 20px;
+}
+
+.related-detail .containers {
+    display: flex;
+    justify-content: start;
+}
+
+.related-detail .containers .container {
+    padding: 0;
+    font-size: 15px;
+}
+
+.container .image img {
+    width: 150px;
+}
+
+.container .image {
+    margin-bottom: 10px;
+}
+
+.container .theBlack {
+    color: #505050;
+    display: block;
+    margin-bottom: 0px;
+    line-height: 1.2; 
+    
+}
+
+.container .not-black {
+    padding-top: 7px;
+    color: #8B96A5;
+}
+
+/* Ensure smooth transition */
+.container .image img {
+    width: 150px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect: Slightly lift the image */
+.container .image img:hover {
+    transform: translateY(-5px); /* Moves only the image up */
+    cursor: pointer;
+}
+
+
+/* Banner Container */
+.banner {
+    position: absolute;
+    width: 1050px;
+    max-width: 1200px;
+    height: 108px;
+    background: linear-gradient(70deg, #2682ff 60%, #0057e0 40%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    color: white;
+    font-family: Arial, sans-serif;
+    left: 115px;
+    top: 1621px;
+}
+
+/* Left Text */
+.banner-text {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5px;
+    padding-left: 10px;
+
+}
+.banner-text h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+.banner-text p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Button */
+.banner-button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-right: 20px;
+}
+
+.banner-button:hover {
+    background-color: darkorange;
+}
+
+
+
+
+
+
+/* for footer */
+ /* Style the footer links */
+ .footer-link {
+    color: #666666;
+    text-decoration: none;
+}
+
+/* Apply hover effect */
+.footer-link:hover {
+    color: #000000 !important;
+}
+
+/* Ensure nav-link also inherits the hover effect */
+.nav-link.footer-link:hover {
+    color: #000000 !important;
+}
+
+.footer-brand img {
+    width: 50px;
+    height: 50px;
+}
+
+.footer-container {
+    width: 100% !important;
+}
+
+.footer-container .row{
+    gap: -29px;
+}
+
+/* for language selection in footer */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    /* border: 1px solid #ccc; */
+    padding: 5px;
+    cursor: pointer;
+    min-width: 150px;
+    background-color: transparent; /* Make background transparent */
+}
+
+.dropdown-btn img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    min-width: 150px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content div {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.dropdown-content div:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-content img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
