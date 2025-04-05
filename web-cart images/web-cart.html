@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F7FAFC;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 30px;
+            border: 3px solid FFFFFF;
+            background-color: white;
+            height: 50px;
+        }
+        .nav_brand {
+            display: flex;
+            align-items: center;
+            font-size: 25px;
+            font-weight: bold;
+            color: #8CB7F5;
+        }
+        .nav_brand img {
+            width: 35px;
+            height: 35px;
+            margin-right: 5px;
+            margin-left: 130%;
+        }
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            margin-right: 3.5%;
+        }
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: gray;
+            font-size: 12px;
+        }
+        .nav-item img {
+            width: 18px;
+            height: 18px;
+            margin-bottom: 3px;
+        }
+        .cart-and-checkout{
+            display: flex;
+        }
+        main {
+            width: 62%;
+            margin-left: 10%;
+            padding: 12px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .details{
+            line-height: 75%;
+        }
+        .details h4{
+            margin-top: -10%;
+            font-weight: lighter;
+
+        }
+        .remove-btn{
+            background-color: white;
+            color: red;
+            border: 2px solid rgb(187, 183, 183);
+            padding: 8px 16px;
+            font-size: 16px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 5px rgba(73, 72, 72, 0.2);
+            cursor: pointer;
+            font-weight: 580;
+        }
+
+        .later-btn{
+            color: #007bff;
+            background-color: white;
+            border: 2px solid rgb(187, 183, 183);
+            padding: 8px 16px;
+            font-size: 16px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 5px rgba(73, 72, 72, 0.2);
+            cursor: pointer;
+            font-weight: 580;
+        }
+        .product-image{
+            display: inline-block;
+            margin-bottom: 70px;
+            padding: 10px; 
+            background-color: #f8f8f8; 
+            border: 2px solid rgb(187, 183, 183) ; 
+            border-radius: 10px
+        }
+
+        .cart-items .item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        .cart-items img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .price-side {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .price {
+            font-size: 18px;
+            font-weight: lighter;
+            margin-bottom: 10px;
+            margin-right: -500%;
+        }
+        .quantity {
+            padding: 5px;
+            width: 150%;
+            border-radius: 5px;
+            border: 1px solid gray;
+            font-size: 14px;
+            margin-right: -500%;
+        }
+        .btn-container{
+            display: flex;
+            justify-content: space-between; 
+            padding: 25px;
+            border-radius: 10px;
+            background-color: white;
+            width: 80%;
+
+        }
+        .back-btn{
+            background-color: rgb(91, 144, 224);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 8px;
+            font-size: 17.5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .removeAll-btn{
+            margin-right: -18%;
+            background-color: white;
+            color: rgb(91, 144, 224);
+            border: 2px solid lightgray;
+            padding: 10px 25px;
+            border-radius: 8px;
+            font-size: 17.5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .info-section {
+            display: flex;
+            gap: 60px;
+            margin-left: 10%;
+            background-color: #F7FAFC;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .info-box {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: #F7FAFC;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .info-box img {    
+            width: 20px;
+            height: 20px;
+            background-color: #d6dbe1;
+            padding: 10px;
+            border-radius: 50%;
+        }
+        .info-box p.info-hd {
+            margin: 0;
+            font-size: 20px;
+            color: #201e1e;
+        }
+        .info-box p {
+           margin: 0;
+           font-size: 14px;
+           color:#979797;
+        }
+        .coupon-container {
+            margin-left: 13%;
+            border: 2px solid #DEE2E7;
+            padding: 15px;
+            width: 265px;
+            background-color: white;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+        }
+        .coupon-container p {
+            margin: 0 0 5px;
+            font-size: 14px;
+            color: #555;
+        }
+        .coupon-box {
+            display: flex;
+            align-items: center;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: #f9f9f9;
+        }
+        .coupon-input {
+            flex: 1;
+            padding: 8px;
+            border: none;
+            outline: none;
+            font-size: 14px;
+            background-color: transparent;
+        }
+        .apply-btn {
+            background: none;
+            border: 2px solid#DEE2E7;
+            border-radius: 8px;
+            color: blue;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 8px 12px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .checkout-container {
+            margin-left: 13%;
+            border: 2px solid #DEE2E7;
+            width: 260px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+        }
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        .discount {
+            color: red;
+        }
+        .tax {
+            color: green;
+        }
+        .total {
+            font-size: 20px;
+            font-weight: bold;
+            border-top: 1px solid lightgray;
+            padding-top: 10px;
+        }
+        .checkout-btn {
+            width: 100%;
+            background-color: #00B517;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .payment-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        .payment-icons img {
+            width: 40px;
+            margin: 0 5px;
+        }
+        .saved-container {
+            border: 2px solid #DEE2E7;
+            padding: 20px;
+            background-color: white;
+            width: 1300px;
+            height: 500px;
+            border-radius: 10px;
+            margin-left: 10%;
+        }
+        .saved-items {
+            display: flex;
+            justify-content: space-between;
+        }
+        .save_later_item {
+            width: 22%;
+            text-align: center;
+            padding: 10px;
+        }
+        .save_later_item img {
+            border-radius: 10px;
+            background-color: #f8f8f8;
+            width: 100%;
+            border-radius: 10px;
+        }
+        .price_save_later_item {
+            font-weight: lighter;
+            font-size: 18px;
+            margin-right: 65%;
+        }
+        .description {
+            font-size: 14px;
+            color: gray;
+            line-height: 0.5;
+            margin-left: -30%;
+        }
+        .move-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            color: #0D6EFD;
+            border: none;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .move-btn img {
+            width: 50px;
+            margin-right: 5px;
+        }
+        .discount_banner {
+            margin-top: 1.7%;
+            width: 1300px;
+            height: 40px;
+            margin-left: 10%;
+            background: linear-gradient(to right, #2196F3 60%, #005ADE 40%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .banner-text {
+            max-width: 60%;
+        }
+        .discount_banner h2 {
+            font-size: 18px;
+            margin: 0;
+        }
+        .discount_banner p {
+            font-size: 12px;
+            margin: 5px 0 0;
+            opacity: 0.8;
+        }
+        .shop-btn {
+            background-color: orange;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .shop-btn:hover {
+            background-color: darkorange;
+        }
+
+
+
+        .footer {
+            padding: 30px;
+            margin-top: 3.5%;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            border: 2px solid white;
+        }
+        .footer-brand {
+            max-width: 220px;
+        }
+        
+        .brand {
+            align-items: center;
+            gap: 8px;
+            font-size: 25px;
+            font-weight: bold;
+            color: #8CB7F5;
+            display: flex;
+        }
+
+        .brand img {
+            width: 35px;
+            height: 35px;         
+            margin-left: 60%;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            line-height: 1.4;
+            margin-top: 8px;
+            max-width: 350px; 
+            transform: translateX(60%);
+            text-align: left;
+            color: gray;
+            white-space: nowrap;
+            overflow: visible;
+            text-overflow: ellipsis;
+            
+        }
+        .social-icons {
+            gap: 8px;
+            margin-top: 12px;
+            display: flex;
+            margin-left: 60%;
+        }
+
+        .social-icons img {
+            height: 24px;
+            width: 24px;
+        }
+        
+        .footer-links {  
+            gap: 70px;
+            display: flex;
+            margin-right: -20%;
+        }
+        
+        .footer-column {
+            flex-direction: column;
+            display: flex;
+        }
+        .footer-column h3 {
+            font-size: 15px;
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        .footer-column a {
+            color: gray;
+            font-size: 15px;
+            margin-bottom: 5px;
+            text-decoration: none;
+        }
+        .app-links {
+            margin-right: 10%;
+            flex-direction: column;
+            gap: 10px;
+            display: flex;
+        }
+        .app-links h3 {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .app-links img {
+            width: 120px;
+        }
+        .footer-bottom {
+            margin-top: 2.5%;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #DEE2E7;       
+        }
+
+        .footer-container {
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+        }
+
+        .footer-container p {
+            color: #333;
+            margin: 0;
+            font-size: 14px;
+        }
+        .language-selector {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+            color: #333;
+            cursor: pointer;
+            
+        }
+        .language-selector img {
+        width: 16px;
+        height: 12px;
+        border-radius: 2px;
+    }
+    .arrow {
+        font-size: 10px;
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav_brand">
+            <img src="images/user-options/logo-symbol.png" alt="Brand Logo">
+            <span>Brand</span>
+        </div>
+        <div class="nav-links">
+            <div class="nav-item">
+                <img src="images/user-options/profile.png" alt="Profile">
+                <span>Profile</span>
+            </div>
+            <div class="nav-item">
+                <img src="images/user-options/message.png" alt="Message">
+                <span>Message</span>
+            </div>
+            <div class="nav-item">
+                <img src="images/user-options/heart.png" alt="Orders">
+                <span>Orders</span>
+            </div>
+            <div class="nav-item">
+                <img src="images/user-options/cart.png" alt="Cart">
+                <span>My cart</span>
+            </div>
+        </div>
+    </nav>
+
+    <h2 style="margin-left: 185px;">My Cart (3)</h2>
+    <div class="cart-and-checkout">
+        <main>
+            <section>
+                <div class="cart-items">
+                    <div class="item">
+                        <img src="images/cloth/1.jpg" alt="T-shirt" class="product-image">
+                        <div class="details">
+                            <h4>T-shirts available colors, for men and lady</h4>
+                            <p style="color: gray;">Size: medium, Color: blue, Material: Plastic</p>
+                            <p style="color: gray;">Seller: Artel Market</p>
+                            <button class="remove-btn">Remove</button> <button class="later-btn">Save for Later</button>
+                        </div>
+                        <div class="price-side">
+                            <div class="price">$78.99</div>
+                            <select class="quantity">
+                                <option>Qty: 9</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="item">
+                        <img src="images/cloth/5.jpg" alt="Bag" class="product-image">
+                        <div class="details">
+                            <h4>T-shirts with various designs, for men and lady</h4>
+                            <p style="color: gray;">Size: medium, Color: blue, Material: Plastic</p>
+                            <p style="color: gray;">Seller: Best factory LLC</p>
+                            <button class="remove-btn">Remove</button> <button class="later-btn">Save for Later</button>
+                        </div>
+                        <div class="price-side">
+                            <div class="price">$39.00</div>
+                            <select class="quantity">
+                                <option>Qty: 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="item">
+                        <img src="images/interior/6.jpg" alt="Lamp" class="product-image">
+                        <div class="details">
+                            <h4>T-shirts with durable cotton, for men and lady</h4>
+                            <p style="color: gray;">Size: medium, Color: blue, Material: Plastic</p>
+                            <p style="color: gray;">Seller: Artel Market</p>
+                            <button class="remove-btn">Remove</button> <button class="later-btn">Save for Later</button>
+                        </div>
+                        <div class="price-side">
+                            <div class="price">$170.50</div>
+                            <select class="quantity">
+                                <option>Qty: 1</option>
+                            </select>
+                        </div>   
+                    </div>
+                    
+                    <div class="btn-container">
+                        <button class="back-btn">← Back to shop</button> <button class="removeAll-btn">Remove all</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div class="coupoun-and-checkout">
+            <div class="coupon-container">
+                <p>Have a coupon?</p>
+                <div class="coupon-box">
+                    <input type="text" placeholder="Add coupon" class="coupon-input">
+                    <button class="apply-btn">Apply</button>
+                </div>
+            </div>
+        
+            <div class="checkout-container">
+                <div class="summary-item">
+                    <span>Subtotal:</span>
+                    <span>$1403.97</span>
+                </div>
+                <div class="summary-item discount">
+                    <span>Discount:</span>
+                    <span>- $60.00</span>
+                </div>
+                <div class="summary-item tax">
+                    <span>Tax:</span>
+                    <span>+ $14.00</span>
+                </div>
+                
+                <div class="summary-item total">
+                    <span>Total:</span>
+                    <span>$1357.97</span>
+                </div>
+        
+                <button class="checkout-btn">Checkout</button>
+        
+                <div class="payment-icons">
+                    <img src="American express.jpeg" alt="American Express">
+                    <img src="Mastercard_logo.jpg" alt="Mastercard">
+                    <img src="Paypal_logo.jpeg" alt="PayPal">
+                    <img src="visa_logo.jpeg" alt="Visa">
+                    <img src="apple_pay.jpeg" alt="Apple Pay">
+                </div>
+            </div>
+        </div>
+
+    </div>
+        <div class="info-section">
+            <div class="info-box">
+                <img src="secure-icon.png" alt="Secure Payment">
+                <div>
+                    <p class="info-hd">Secure payment</p>
+                    <p>Have you ever finally just</p>
+                </div>
+            </div>
+            <div class="info-box">
+                <img src="customer_support-icon.jpeg" alt="Customer Support">
+                <div>
+                    <p class="info-hd">Customer support</p>
+                    <p>Have you ever finally just</p>
+                </div>
+            </div>
+            <div class="info-box">
+                <img src="delivery-icon.jpeg" alt="Free Delivery">
+                <div>
+                    <p class="info-hd">Free delivery</p>
+                    <p>Have you ever finally just</p>
+                </div>
+            </div>   
+        </div>
+    </div>
+
+    <div class="saved-container">
+        <h3 style="margin-bottom: 20px">Saved for later</h3>
+        <div class="saved-items">
+            <div class="save_later_item">
+                <img src="images/tech/2.jpg" alt="Tablet">
+                <p class="price_save_later_item">$99.50</p>
+                <p class="description">GoPro HERO6 4K Action</p>
+                <p class="description">Camera - Black</p>
+                <button class="move-btn"><img src="cart-icon.jpg" alt="Cart"> Move to cart</button>
+            </div>
+            <div class="save_later_item">
+                <img src="images/tech/4.jpg" alt="Phone">
+                <p class="price_save_later_item">$99.50</p>
+                <p class="description">GoPro HERO6 4K Action</p>
+                <p class="description">Camera - Black</p>
+                <button class="move-btn"><img src="cart-icon.jpg" alt="Cart"> Move to cart</button>
+            </div>
+            <div class="save_later_item">
+                <img src="images/tech/8.jpg" alt="Watch">
+                <p class="price_save_later_item">$99.50</p>
+                <p class="description">GoPro HERO6 4K Action</p>
+                <p class="description">Camera - Black</p>
+                <button class="move-btn"><img src="cart-icon.jpg" alt="Cart"> Move to cart</button>
+            </div>
+            <div class="save_later_item">
+                <img src="images/tech/7.jpg" alt="Laptop">
+                <p class="price_save_later_item">$99.50</p>
+                <p class="description">GoPro HERO6 4K Action</p>
+                <p class="description">Camera - Black</p>
+                <button class="move-btn"><img src="cart-icon.jpg" alt="Cart"> Move to cart</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="discount_banner">
+        <div class="banner-text">
+            <h2>Super discount on more than 100 USD</h2>
+            <p>Have you ever finally just write dummy info</p>
+        </div>
+        <button class="shop-btn">Shop now</button>
+    </div>
+
+    
+    <footer class="footer">
+            <div class="footer-brand">
+                <div class="brand">
+                    <img src="images/user-options/logo-symbol.png" alt="Brand Logo">
+                    <span>Brand</span>
+                </div>
+                <p>Best information about the company<br>goes here but now lorem ipsum is</p>
+                <div class="social-icons">
+                    <img src="https://img.icons8.com/material/24/bdc4cd/facebook-new.png" alt="Facebook">
+                    <img src="https://img.icons8.com/material/24/bdc4cd/twitter--v2.png" alt="Twitter">
+                    <img src="https://img.icons8.com/material/24/bdc4cd/linkedin--v1.png" alt="LinkedIn">
+                    <img src="https://img.icons8.com/material/24/bdc4cd/instagram.png" alt="Instagram">
+                    <img src="https://img.icons8.com/ios-filled/50/bdc4cd/youtube-play.png" alt="YouTube">
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>About</h3>
+                    <a href="#">About Us</a>
+                    <a href="#">Find Store</a>
+                    <a href="#">Categories</a>
+                    <a href="#">Blogs</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Partnership</h3>
+                    <a href="#">About Us</a>
+                    <a href="#">Find Store</a>
+                    <a href="#">Categories</a>
+                    <a href="#">Blogs</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Information</h3>
+                    <a href="#">Help Center</a>
+                    <a href="#">Money Refund</a>
+                    <a href="#">Shipping</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                <div class="footer-column">
+                    <h3>For users</h3>
+                    <a href="#">Login</a>
+                    <a href="#">Register</a>
+                    <a href="#">Settings</a>
+                    <a href="#">My Orders</a>
+                </div>
+            </div>
+    
+            <div class="app-links">
+                <h3>Get app</h3>
+                <img src="images/user-options/apple.png" alt="App Store">
+                <img src="images/user-options/google.png" alt="Google Play">
+            </div>
+        
+    </footer>
+    <footer class="footer-bottom">
+        <div class="footer-container">
+            <p>© 2023 Ecommerce.</p>
+            <div class="language-selector">
+                <img src="public/flags/usa.png" alt="US Flag">
+                <span>English</span>
+                <span class="arrow">▲</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
